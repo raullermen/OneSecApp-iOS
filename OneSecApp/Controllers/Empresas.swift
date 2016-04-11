@@ -64,6 +64,7 @@ class Empresas: UITableViewController {
                 tableView.registerNib(UINib(nibName: "EmpresaTableViewCell", bundle: nil), forCellReuseIdentifier: "EmpresaTableViewCell")
                 let cell = tableView.dequeueReusableCellWithIdentifier("EmpresaTableViewCell", forIndexPath: indexPath) as! EmpresaTableViewCell
                 return cell
+            
         }
         
         tableView.registerNib(UINib(nibName: "EmpresaTableViewCell", bundle: nil), forCellReuseIdentifier: "EmpresaTableViewCell")
