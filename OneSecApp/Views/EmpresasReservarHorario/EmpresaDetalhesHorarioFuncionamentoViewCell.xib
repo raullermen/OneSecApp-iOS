@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Gotham-Bold.otf">
+            <string>GothamBold</string>
+        </mutableArray>
+        <mutableArray key="Gotham-Light.otf">
+            <string>Gotham-Light</string>
+            <string>Gotham-Light</string>
+            <string>Gotham-Light</string>
+            <string>Gotham-Light</string>
+            <string>Gotham-Light</string>
+            <string>Gotham-Light</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="EmpresaDetalhesHorarioFuncionamentoViewCell" rowHeight="91" id="4lJ-rD-rSJ" customClass="EmpresaDetalhesHorarioFuncionamentoViewCell" customModule="OneSecApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="419" height="91"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4lJ-rD-rSJ" id="hU7-Pu-WRn">
+                <rect key="frame" x="0.0" y="0.0" width="419" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horários de Funcionamento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvl-uA-2kM">
+                        <rect key="frame" x="18" y="8" width="373" height="15"/>
+                        <fontDescription key="fontDescription" name="GothamBold" family="Gotham Bold" pointSize="16"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Segunda a Sexta:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bei-UN-6HJ">
+                        <rect key="frame" x="18" y="28" width="187" height="12"/>
+                        <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sábado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKD-IE-iwh">
+                        <rect key="frame" x="18" y="45" width="187" height="12"/>
+                        <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Domingos e Feriados" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orJ-py-oF8">
+                        <rect key="frame" x="18" y="62" width="187" height="12"/>
+                        <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8h ás 12h" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogd-XT-zfZ">
+                        <rect key="frame" x="225" y="45" width="186" height="12"/>
+                        <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fechado" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmM-Pb-AJa">
+                        <rect key="frame" x="225" y="62" width="186" height="12"/>
+                        <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8h ás 18h" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="935-RR-oUa">
+                        <rect key="frame" x="225" y="28" width="186" height="12"/>
+                        <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="935-RR-oUa" secondAttribute="trailing" id="68b-Jy-TWV"/>
+                    <constraint firstItem="bei-UN-6HJ" firstAttribute="leading" secondItem="yvl-uA-2kM" secondAttribute="leading" id="764-Ds-t9S"/>
+                    <constraint firstItem="orJ-py-oF8" firstAttribute="leading" secondItem="tKD-IE-iwh" secondAttribute="leading" id="8ke-EX-yrR"/>
+                    <constraint firstItem="Ogd-XT-zfZ" firstAttribute="top" secondItem="tKD-IE-iwh" secondAttribute="top" id="93t-pk-95g"/>
+                    <constraint firstItem="bei-UN-6HJ" firstAttribute="width" secondItem="yvl-uA-2kM" secondAttribute="width" multiplier="0.5" id="9p0-cO-g6k"/>
+                    <constraint firstItem="orJ-py-oF8" firstAttribute="top" secondItem="tKD-IE-iwh" secondAttribute="bottom" constant="5" id="9tE-bO-3hM"/>
+                    <constraint firstItem="orJ-py-oF8" firstAttribute="trailing" secondItem="tKD-IE-iwh" secondAttribute="trailing" id="A5k-qh-9dv"/>
+                    <constraint firstItem="bei-UN-6HJ" firstAttribute="top" secondItem="yvl-uA-2kM" secondAttribute="bottom" constant="5" id="FG3-mu-UhI"/>
+                    <constraint firstItem="Ogd-XT-zfZ" firstAttribute="width" secondItem="935-RR-oUa" secondAttribute="width" id="GBv-So-tOS"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="yvl-uA-2kM" secondAttribute="trailing" constant="20" id="Q89-BB-CI2"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="yvl-uA-2kM" secondAttribute="leading" constant="-10" id="SK9-5X-ogf"/>
+                    <constraint firstItem="935-RR-oUa" firstAttribute="top" secondItem="bei-UN-6HJ" secondAttribute="top" id="Stf-GN-wKM"/>
+                    <constraint firstItem="tKD-IE-iwh" firstAttribute="leading" secondItem="bei-UN-6HJ" secondAttribute="leading" id="Svx-2j-FSy"/>
+                    <constraint firstItem="Ogd-XT-zfZ" firstAttribute="trailing" secondItem="935-RR-oUa" secondAttribute="trailing" id="T95-Ca-TWU"/>
+                    <constraint firstItem="WmM-Pb-AJa" firstAttribute="trailing" secondItem="Ogd-XT-zfZ" secondAttribute="trailing" id="Wah-nw-VTU"/>
+                    <constraint firstItem="WmM-Pb-AJa" firstAttribute="width" secondItem="Ogd-XT-zfZ" secondAttribute="width" id="Wv6-0g-qRK"/>
+                    <constraint firstItem="WmM-Pb-AJa" firstAttribute="top" secondItem="orJ-py-oF8" secondAttribute="top" id="ZuL-VX-Khz"/>
+                    <constraint firstItem="yvl-uA-2kM" firstAttribute="top" secondItem="hU7-Pu-WRn" secondAttribute="topMargin" id="iJH-V8-kV8"/>
+                    <constraint firstItem="935-RR-oUa" firstAttribute="trailing" secondItem="yvl-uA-2kM" secondAttribute="trailing" id="nSE-yM-Qpu"/>
+                    <constraint firstItem="tKD-IE-iwh" firstAttribute="top" secondItem="bei-UN-6HJ" secondAttribute="bottom" constant="5" id="tbY-lX-tfP"/>
+                    <constraint firstItem="935-RR-oUa" firstAttribute="width" secondItem="yvl-uA-2kM" secondAttribute="width" multiplier="0.5" id="uAt-KN-pr4"/>
+                    <constraint firstItem="tKD-IE-iwh" firstAttribute="trailing" secondItem="bei-UN-6HJ" secondAttribute="trailing" id="yGv-I9-MZO"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="nSE-yM-Qpu"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="303.5" y="361.5"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Gotham-Bold.otf">
+            <string>GothamBold</string>
+        </mutableArray>
+        <mutableArray key="Gotham-Light.otf">
+            <string>Gotham-Light</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="qBq-s0-BPm" customClass="CalendarioEmpresaHeaderView" customModule="OneSecApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="441" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marcar Horário do Corte de Cabelo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rc2-ZK-2Lt">
+                    <rect key="frame" x="0.0" y="30" width="441" height="15"/>
+                    <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="14"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personality" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXU-I8-qdb">
+                    <rect key="frame" x="0.0" y="10" width="441" height="17"/>
+                    <fontDescription key="fontDescription" name="GothamBold" family="Gotham Bold" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.88235294119999996" green="0.16078431369999999" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="rc2-ZK-2Lt" firstAttribute="trailing" secondItem="dXU-I8-qdb" secondAttribute="trailing" id="ImE-e2-e1A"/>
+                <constraint firstItem="rc2-ZK-2Lt" firstAttribute="leading" secondItem="dXU-I8-qdb" secondAttribute="leading" id="JNi-cW-w7A"/>
+                <constraint firstItem="rc2-ZK-2Lt" firstAttribute="top" secondItem="dXU-I8-qdb" secondAttribute="bottom" constant="3" id="Rxd-U8-2Np"/>
+                <constraint firstItem="dXU-I8-qdb" firstAttribute="top" secondItem="qBq-s0-BPm" secondAttribute="top" constant="10" id="Ube-pc-X8g"/>
+                <constraint firstAttribute="trailing" secondItem="dXU-I8-qdb" secondAttribute="trailing" id="fu4-WX-JZF"/>
+                <constraint firstItem="dXU-I8-qdb" firstAttribute="leading" secondItem="qBq-s0-BPm" secondAttribute="leading" id="lJz-yQ-Xcn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="NomeEmpresa" destination="dXU-I8-qdb" id="RX1-rf-iw1"/>
+                <outlet property="NomeServico" destination="rc2-ZK-2Lt" id="fci-yZ-SH0"/>
+            </connections>
+            <point key="canvasLocation" x="311.5" y="9"/>
+        </view>
+    </objects>
+</document>

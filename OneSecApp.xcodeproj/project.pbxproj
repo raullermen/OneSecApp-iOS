@@ -7,14 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58EB4F002AAD9A4918077502 /* Pods_OneSecAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45CC6061E7A94960E4CCE1DB /* Pods_OneSecAppUITests.framework */; };
+		5D8A77EF145BCC0FE31465A7 /* Pods_OneSecAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77E9E1AE1B027A375B1338A /* Pods_OneSecAppTests.framework */; };
+		61DDC211DF6A626FF817BABC /* Pods_OneSecApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312BC83D3EA9970F44336DFD /* Pods_OneSecApp.framework */; };
+		FD4496C61CBB1B7900FB55B1 /* LoginDados.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4496C51CBB1B7900FB55B1 /* LoginDados.swift */; };
+		FD4496C91CBB3EFD00FB55B1 /* EmpresaNSManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4496C81CBB3EFD00FB55B1 /* EmpresaNSManagedObject.swift */; };
+		FD4496CB1CBB414D00FB55B1 /* JsonParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4496CA1CBB414D00FB55B1 /* JsonParse.swift */; };
+		FD4948D41CB34A1C00629EC8 /* Configuracoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4948CD1CB34A1C00629EC8 /* Configuracoes.swift */; };
+		FD4948D51CB34A1C00629EC8 /* Empresas.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4948CE1CB34A1C00629EC8 /* Empresas.swift */; };
+		FD4948D61CB34A1C00629EC8 /* DetalhesEmpresa.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4948CF1CB34A1C00629EC8 /* DetalhesEmpresa.swift */; };
+		FD4948D71CB34A1C00629EC8 /* Favoritos.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4948D01CB34A1C00629EC8 /* Favoritos.swift */; };
+		FD4948D81CB34A1C00629EC8 /* HorariosEmpresa.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4948D11CB34A1C00629EC8 /* HorariosEmpresa.swift */; };
+		FD4948D91CB34A1C00629EC8 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4948D21CB34A1C00629EC8 /* Login.swift */; };
+		FD4948DA1CB34A1C00629EC8 /* MinhasReservas.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4948D31CB34A1C00629EC8 /* MinhasReservas.swift */; };
+		FD4948DF1CB34A6600629EC8 /* EmpresaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4948DB1CB34A6600629EC8 /* EmpresaTableViewCell.swift */; };
+		FD4948E01CB34A6600629EC8 /* EmpresaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD4948DC1CB34A6600629EC8 /* EmpresaTableViewCell.xib */; };
+		FD4948E11CB34A6600629EC8 /* ListaEmpresasHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4948DD1CB34A6600629EC8 /* ListaEmpresasHeader.swift */; };
+		FD4948E21CB34A6600629EC8 /* ListaEmpresasHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD4948DE1CB34A6600629EC8 /* ListaEmpresasHeader.xib */; };
+		FD4948E71CB34A8000629EC8 /* MinhaReservaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4948E31CB34A8000629EC8 /* MinhaReservaTableViewCell.swift */; };
+		FD4948E81CB34A8000629EC8 /* MinhaReservaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD4948E41CB34A8000629EC8 /* MinhaReservaTableViewCell.xib */; };
+		FD4948E91CB34A8000629EC8 /* ReservaTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4948E51CB34A8000629EC8 /* ReservaTableViewHeader.swift */; };
+		FD4948EA1CB34A8000629EC8 /* ReservaTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD4948E61CB34A8000629EC8 /* ReservaTableViewHeader.xib */; };
+		FD4948ED1CB34A8B00629EC8 /* DefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4948EB1CB34A8B00629EC8 /* DefaultTableViewCell.swift */; };
+		FD4948EE1CB34A8B00629EC8 /* DefaultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD4948EC1CB34A8B00629EC8 /* DefaultTableViewCell.xib */; };
+		FD4948F01CB34B5900629EC8 /* EmpresaReservaHorarioHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD4948EF1CB34B5900629EC8 /* EmpresaReservaHorarioHeaderTableViewCell.xib */; };
+		FD4948F21CB34BEB00629EC8 /* EmpresaReservaHorarioHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4948F11CB34BEB00629EC8 /* EmpresaReservaHorarioHeaderTableViewCell.swift */; };
+		FD4948F41CB34C5E00629EC8 /* BotaoReservarHorarioViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD4948F31CB34C5E00629EC8 /* BotaoReservarHorarioViewCell.xib */; };
+		FD4948F61CB34C6D00629EC8 /* BotaoReservarHorarioViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4948F51CB34C6D00629EC8 /* BotaoReservarHorarioViewCell.swift */; };
+		FD4948FA1CB35AB000629EC8 /* EmpresaDetalhesDescricaoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD4948F91CB35AB000629EC8 /* EmpresaDetalhesDescricaoViewCell.xib */; };
+		FD4948FE1CB35AFE00629EC8 /* EmpresaDetalhesDescricaoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4948FD1CB35AFE00629EC8 /* EmpresaDetalhesDescricaoViewCell.swift */; };
+		FD4949001CB35DEB00629EC8 /* EmpresaDetalhesHorarioFuncionamentoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD4948FF1CB35DEB00629EC8 /* EmpresaDetalhesHorarioFuncionamentoViewCell.xib */; };
+		FD4949021CB35DFB00629EC8 /* EmpresaDetalhesHorarioFuncionamentoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4949011CB35DFB00629EC8 /* EmpresaDetalhesHorarioFuncionamentoViewCell.swift */; };
+		FD4949081CB3604A00629EC8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD4949071CB3604900629EC8 /* MapKit.framework */; };
+		FD50D0C51CB12AC000E6C52F /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD50D0C41CB12AC000E6C52F /* Util.swift */; };
+		FD50D0C91CB12BFF00E6C52F /* Gotham-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD50D0C61CB12BC200E6C52F /* Gotham-Book.otf */; };
+		FD50D0CA1CB12BFF00E6C52F /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD50D0C71CB12BC200E6C52F /* Gotham-Light.otf */; };
+		FD50D0CB1CB12BFF00E6C52F /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD50D0C81CB12BC200E6C52F /* Gotham-Medium.otf */; };
+		FD50D0CF1CB13A2900E6C52F /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD50D0CE1CB13A1B00E6C52F /* Gotham-Bold.otf */; };
+		FD68AC9B1CB9269C0082C505 /* CalendarioBotaoReservarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD68AC9A1CB9269C0082C505 /* CalendarioBotaoReservarViewCell.swift */; };
+		FD68AC9E1CB926D00082C505 /* EmpresaDetalhesLocalizacaoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD68AC9C1CB926D00082C505 /* EmpresaDetalhesLocalizacaoViewCell.swift */; };
+		FD68AC9F1CB926D00082C505 /* EmpresaDetalhesLocalizacaoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD68AC9D1CB926D00082C505 /* EmpresaDetalhesLocalizacaoViewCell.xib */; };
+		FD68ACA11CB926F40082C505 /* CalendarioEmpresaHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD68ACA01CB926F40082C505 /* CalendarioEmpresaHeaderView.swift */; };
+		FD68ACA31CB9270A0082C505 /* CalendarioBotaoReservarViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD68ACA21CB9270A0082C505 /* CalendarioBotaoReservarViewCell.xib */; };
+		FD68ACA51CB9B78D0082C505 /* DetalhesReserva.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD68ACA41CB9B78D0082C505 /* DetalhesReserva.swift */; };
+		FD68ACA81CB9F25D0082C505 /* DetalheReservaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD68ACA71CB9F25D0082C505 /* DetalheReservaViewCell.swift */; };
+		FD68ACAA1CB9F2720082C505 /* DetalheReservaViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD68ACA91CB9F2720082C505 /* DetalheReservaViewCell.xib */; };
+		FD6B292F1CAB611400F5EB1E /* OneSecModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD6B292D1CAB611400F5EB1E /* OneSecModel.xcdatamodeld */; };
+		FD6B29311CAB660A00F5EB1E /* CompanyDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6B29301CAB660A00F5EB1E /* CompanyDTO.swift */; };
+		FD6B29331CAB675800F5EB1E /* ReservaNSManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6B29321CAB675800F5EB1E /* ReservaNSManagedObject.swift */; };
+		FD6B29351CAB67F900F5EB1E /* ReservaDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6B29341CAB67F900F5EB1E /* ReservaDTO.swift */; };
+		FD7FA5581CB8912500F7D65B /* CalendarioEmpresaHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD7FA5571CB8912500F7D65B /* CalendarioEmpresaHeaderView.xib */; };
 		FDADF35C1C710EF4000708A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDADF35B1C710EF4000708A0 /* AppDelegate.swift */; };
-		FDADF35E1C710EF4000708A0 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDADF35D1C710EF4000708A0 /* FirstViewController.swift */; };
-		FDADF3601C710EF4000708A0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDADF35F1C710EF4000708A0 /* SecondViewController.swift */; };
 		FDADF3631C710EF4000708A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDADF3611C710EF4000708A0 /* Main.storyboard */; };
 		FDADF3651C710EF4000708A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDADF3641C710EF4000708A0 /* Assets.xcassets */; };
 		FDADF3681C710EF4000708A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDADF3661C710EF4000708A0 /* LaunchScreen.storyboard */; };
 		FDADF3731C710EF4000708A0 /* OneSecAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDADF3721C710EF4000708A0 /* OneSecAppTests.swift */; };
 		FDADF37E1C710EF4000708A0 /* OneSecAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDADF37D1C710EF4000708A0 /* OneSecAppUITests.swift */; };
+		FDDB21311C9A3B5C00CE787C /* HorarioEmpresaDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB21301C9A3B5C00CE787C /* HorarioEmpresaDTO.swift */; };
+		FDDB21341C9A3C7E00CE787C /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB21331C9A3C7E00CE787C /* Webservice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +85,64 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1278D371108A1AC9677306AF /* Pods-OneSecAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSecAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneSecAppUITests/Pods-OneSecAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		312BC83D3EA9970F44336DFD /* Pods_OneSecApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSecApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45CC6061E7A94960E4CCE1DB /* Pods_OneSecAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSecAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5082F098F140EE143736D31C /* Pods-OneSecAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSecAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneSecAppUITests/Pods-OneSecAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		898B18B08885FFE8E8C1C367 /* Pods-OneSecAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSecAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneSecAppTests/Pods-OneSecAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		95C569134E5B3B7B613B129E /* Pods-OneSecApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSecApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneSecApp/Pods-OneSecApp.release.xcconfig"; sourceTree = "<group>"; };
+		98CDB4FFEBA02FF9BFB5B68D /* Pods-OneSecApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSecApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneSecApp/Pods-OneSecApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B77E9E1AE1B027A375B1338A /* Pods_OneSecAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSecAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7F3A6AAFBC089C22D31A750 /* Pods-OneSecAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSecAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneSecAppTests/Pods-OneSecAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		FD4496C51CBB1B7900FB55B1 /* LoginDados.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginDados.swift; path = Controllers/LoginDados.swift; sourceTree = "<group>"; };
+		FD4496C81CBB3EFD00FB55B1 /* EmpresaNSManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmpresaNSManagedObject.swift; sourceTree = "<group>"; };
+		FD4496CA1CBB414D00FB55B1 /* JsonParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JsonParse.swift; path = Classes/JsonParse.swift; sourceTree = "<group>"; };
+		FD4948CD1CB34A1C00629EC8 /* Configuracoes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configuracoes.swift; path = Controllers/Configuracoes.swift; sourceTree = "<group>"; };
+		FD4948CE1CB34A1C00629EC8 /* Empresas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Empresas.swift; path = Controllers/Empresas.swift; sourceTree = "<group>"; };
+		FD4948CF1CB34A1C00629EC8 /* DetalhesEmpresa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetalhesEmpresa.swift; path = Controllers/DetalhesEmpresa.swift; sourceTree = "<group>"; };
+		FD4948D01CB34A1C00629EC8 /* Favoritos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favoritos.swift; path = Controllers/Favoritos.swift; sourceTree = "<group>"; };
+		FD4948D11CB34A1C00629EC8 /* HorariosEmpresa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HorariosEmpresa.swift; path = Controllers/HorariosEmpresa.swift; sourceTree = "<group>"; };
+		FD4948D21CB34A1C00629EC8 /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Login.swift; path = Controllers/Login.swift; sourceTree = "<group>"; };
+		FD4948D31CB34A1C00629EC8 /* MinhasReservas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MinhasReservas.swift; path = Controllers/MinhasReservas.swift; sourceTree = "<group>"; };
+		FD4948DB1CB34A6600629EC8 /* EmpresaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmpresaTableViewCell.swift; path = Views/Empresas/EmpresaTableViewCell.swift; sourceTree = "<group>"; };
+		FD4948DC1CB34A6600629EC8 /* EmpresaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EmpresaTableViewCell.xib; path = Views/Empresas/EmpresaTableViewCell.xib; sourceTree = "<group>"; };
+		FD4948DD1CB34A6600629EC8 /* ListaEmpresasHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListaEmpresasHeader.swift; path = Views/Empresas/ListaEmpresasHeader.swift; sourceTree = "<group>"; };
+		FD4948DE1CB34A6600629EC8 /* ListaEmpresasHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListaEmpresasHeader.xib; path = Views/Empresas/ListaEmpresasHeader.xib; sourceTree = "<group>"; };
+		FD4948E31CB34A8000629EC8 /* MinhaReservaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MinhaReservaTableViewCell.swift; path = Views/MinhasReservas/MinhaReservaTableViewCell.swift; sourceTree = "<group>"; };
+		FD4948E41CB34A8000629EC8 /* MinhaReservaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MinhaReservaTableViewCell.xib; path = Views/MinhasReservas/MinhaReservaTableViewCell.xib; sourceTree = "<group>"; };
+		FD4948E51CB34A8000629EC8 /* ReservaTableViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReservaTableViewHeader.swift; path = Views/MinhasReservas/ReservaTableViewHeader.swift; sourceTree = "<group>"; };
+		FD4948E61CB34A8000629EC8 /* ReservaTableViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReservaTableViewHeader.xib; path = Views/MinhasReservas/ReservaTableViewHeader.xib; sourceTree = "<group>"; };
+		FD4948EB1CB34A8B00629EC8 /* DefaultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultTableViewCell.swift; path = Views/DefaultTableViewCell.swift; sourceTree = "<group>"; };
+		FD4948EC1CB34A8B00629EC8 /* DefaultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DefaultTableViewCell.xib; path = Views/DefaultTableViewCell.xib; sourceTree = "<group>"; };
+		FD4948EF1CB34B5900629EC8 /* EmpresaReservaHorarioHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EmpresaReservaHorarioHeaderTableViewCell.xib; path = Views/EmpresasReservarHorario/EmpresaReservaHorarioHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		FD4948F11CB34BEB00629EC8 /* EmpresaReservaHorarioHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmpresaReservaHorarioHeaderTableViewCell.swift; path = Views/EmpresasReservarHorario/EmpresaReservaHorarioHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		FD4948F31CB34C5E00629EC8 /* BotaoReservarHorarioViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BotaoReservarHorarioViewCell.xib; path = Views/EmpresasReservarHorario/BotaoReservarHorarioViewCell.xib; sourceTree = "<group>"; };
+		FD4948F51CB34C6D00629EC8 /* BotaoReservarHorarioViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BotaoReservarHorarioViewCell.swift; path = Views/EmpresasReservarHorario/BotaoReservarHorarioViewCell.swift; sourceTree = "<group>"; };
+		FD4948F91CB35AB000629EC8 /* EmpresaDetalhesDescricaoViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EmpresaDetalhesDescricaoViewCell.xib; path = Views/EmpresasReservarHorario/EmpresaDetalhesDescricaoViewCell.xib; sourceTree = "<group>"; };
+		FD4948FD1CB35AFE00629EC8 /* EmpresaDetalhesDescricaoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmpresaDetalhesDescricaoViewCell.swift; path = Views/EmpresasReservarHorario/EmpresaDetalhesDescricaoViewCell.swift; sourceTree = "<group>"; };
+		FD4948FF1CB35DEB00629EC8 /* EmpresaDetalhesHorarioFuncionamentoViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EmpresaDetalhesHorarioFuncionamentoViewCell.xib; path = Views/EmpresasReservarHorario/EmpresaDetalhesHorarioFuncionamentoViewCell.xib; sourceTree = "<group>"; };
+		FD4949011CB35DFB00629EC8 /* EmpresaDetalhesHorarioFuncionamentoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmpresaDetalhesHorarioFuncionamentoViewCell.swift; path = Views/EmpresasReservarHorario/EmpresaDetalhesHorarioFuncionamentoViewCell.swift; sourceTree = "<group>"; };
+		FD4949071CB3604900629EC8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FD50D0C41CB12AC000E6C52F /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		FD50D0C61CB12BC200E6C52F /* Gotham-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Book.otf"; sourceTree = "<group>"; };
+		FD50D0C71CB12BC200E6C52F /* Gotham-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Light.otf"; sourceTree = "<group>"; };
+		FD50D0C81CB12BC200E6C52F /* Gotham-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Medium.otf"; sourceTree = "<group>"; };
+		FD50D0CE1CB13A1B00E6C52F /* Gotham-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Bold.otf"; sourceTree = "<group>"; };
+		FD68AC9A1CB9269C0082C505 /* CalendarioBotaoReservarViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarioBotaoReservarViewCell.swift; path = Views/EmpresaCalendario/CalendarioBotaoReservarViewCell.swift; sourceTree = "<group>"; };
+		FD68AC9C1CB926D00082C505 /* EmpresaDetalhesLocalizacaoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmpresaDetalhesLocalizacaoViewCell.swift; path = Views/EmpresasReservarHorario/EmpresaDetalhesLocalizacaoViewCell.swift; sourceTree = "<group>"; };
+		FD68AC9D1CB926D00082C505 /* EmpresaDetalhesLocalizacaoViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EmpresaDetalhesLocalizacaoViewCell.xib; path = Views/EmpresasReservarHorario/EmpresaDetalhesLocalizacaoViewCell.xib; sourceTree = "<group>"; };
+		FD68ACA01CB926F40082C505 /* CalendarioEmpresaHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarioEmpresaHeaderView.swift; path = Views/EmpresaCalendario/CalendarioEmpresaHeaderView.swift; sourceTree = "<group>"; };
+		FD68ACA21CB9270A0082C505 /* CalendarioBotaoReservarViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CalendarioBotaoReservarViewCell.xib; path = Views/EmpresaCalendario/CalendarioBotaoReservarViewCell.xib; sourceTree = "<group>"; };
+		FD68ACA41CB9B78D0082C505 /* DetalhesReserva.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalhesReserva.swift; sourceTree = "<group>"; };
+		FD68ACA71CB9F25D0082C505 /* DetalheReservaViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetalheReservaViewCell.swift; path = Views/DetalhesReserva/DetalheReservaViewCell.swift; sourceTree = "<group>"; };
+		FD68ACA91CB9F2720082C505 /* DetalheReservaViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetalheReservaViewCell.xib; sourceTree = "<group>"; };
+		FD6B292E1CAB611400F5EB1E /* OneSecModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OneSecModel.xcdatamodel; sourceTree = "<group>"; };
+		FD6B29301CAB660A00F5EB1E /* CompanyDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyDTO.swift; sourceTree = "<group>"; };
+		FD6B29321CAB675800F5EB1E /* ReservaNSManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservaNSManagedObject.swift; sourceTree = "<group>"; };
+		FD6B29341CAB67F900F5EB1E /* ReservaDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservaDTO.swift; sourceTree = "<group>"; };
+		FD7FA5571CB8912500F7D65B /* CalendarioEmpresaHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CalendarioEmpresaHeaderView.xib; path = Views/EmpresaCalendario/CalendarioEmpresaHeaderView.xib; sourceTree = "<group>"; };
 		FDADF3581C710EF4000708A0 /* OneSecApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneSecApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDADF35B1C710EF4000708A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FDADF35D1C710EF4000708A0 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		FDADF35F1C710EF4000708A0 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		FDADF3621C710EF4000708A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDADF3641C710EF4000708A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDADF3671C710EF4000708A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +153,8 @@
 		FDADF3791C710EF4000708A0 /* OneSecAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneSecAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDADF37D1C710EF4000708A0 /* OneSecAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSecAppUITests.swift; sourceTree = "<group>"; };
 		FDADF37F1C710EF4000708A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDDB21301C9A3B5C00CE787C /* HorarioEmpresaDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorarioEmpresaDTO.swift; sourceTree = "<group>"; };
+		FDDB21331C9A3C7E00CE787C /* Webservice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +162,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD4949081CB3604A00629EC8 /* MapKit.framework in Frameworks */,
+				61DDC211DF6A626FF817BABC /* Pods_OneSecApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D8A77EF145BCC0FE31465A7 /* Pods_OneSecAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +179,105 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58EB4F002AAD9A4918077502 /* Pods_OneSecAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78FEBA44477A986BE27CA6A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD4949071CB3604900629EC8 /* MapKit.framework */,
+				312BC83D3EA9970F44336DFD /* Pods_OneSecApp.framework */,
+				B77E9E1AE1B027A375B1338A /* Pods_OneSecAppTests.framework */,
+				45CC6061E7A94960E4CCE1DB /* Pods_OneSecAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		93A9597EB774ABC055B8C188 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98CDB4FFEBA02FF9BFB5B68D /* Pods-OneSecApp.debug.xcconfig */,
+				95C569134E5B3B7B613B129E /* Pods-OneSecApp.release.xcconfig */,
+				898B18B08885FFE8E8C1C367 /* Pods-OneSecAppTests.debug.xcconfig */,
+				F7F3A6AAFBC089C22D31A750 /* Pods-OneSecAppTests.release.xcconfig */,
+				5082F098F140EE143736D31C /* Pods-OneSecAppUITests.debug.xcconfig */,
+				1278D371108A1AC9677306AF /* Pods-OneSecAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FD4496C71CBB3ECB00FB55B1 /* DataObjects */ = {
+			isa = PBXGroup;
+			children = (
+				FD6B29321CAB675800F5EB1E /* ReservaNSManagedObject.swift */,
+				FD4496C81CBB3EFD00FB55B1 /* EmpresaNSManagedObject.swift */,
+			);
+			name = DataObjects;
+			sourceTree = "<group>";
+		};
+		FD4948C81CB33F6C00629EC8 /* Empresas */ = {
+			isa = PBXGroup;
+			children = (
+				FD4948DB1CB34A6600629EC8 /* EmpresaTableViewCell.swift */,
+				FD4948DC1CB34A6600629EC8 /* EmpresaTableViewCell.xib */,
+				FD4948DD1CB34A6600629EC8 /* ListaEmpresasHeader.swift */,
+				FD4948DE1CB34A6600629EC8 /* ListaEmpresasHeader.xib */,
+			);
+			name = Empresas;
+			sourceTree = "<group>";
+		};
+		FD4948C91CB33F9E00629EC8 /* MinhasReservas */ = {
+			isa = PBXGroup;
+			children = (
+				FD4948E31CB34A8000629EC8 /* MinhaReservaTableViewCell.swift */,
+				FD4948E41CB34A8000629EC8 /* MinhaReservaTableViewCell.xib */,
+				FD4948E51CB34A8000629EC8 /* ReservaTableViewHeader.swift */,
+				FD4948E61CB34A8000629EC8 /* ReservaTableViewHeader.xib */,
+			);
+			name = MinhasReservas;
+			sourceTree = "<group>";
+		};
+		FD4948CC1CB3497100629EC8 /* EmpresasReservarHorario */ = {
+			isa = PBXGroup;
+			children = (
+				FD4948EF1CB34B5900629EC8 /* EmpresaReservaHorarioHeaderTableViewCell.xib */,
+				FD4948F11CB34BEB00629EC8 /* EmpresaReservaHorarioHeaderTableViewCell.swift */,
+				FD4948F31CB34C5E00629EC8 /* BotaoReservarHorarioViewCell.xib */,
+				FD4948F51CB34C6D00629EC8 /* BotaoReservarHorarioViewCell.swift */,
+				FD4948F91CB35AB000629EC8 /* EmpresaDetalhesDescricaoViewCell.xib */,
+				FD4948FD1CB35AFE00629EC8 /* EmpresaDetalhesDescricaoViewCell.swift */,
+				FD4948FF1CB35DEB00629EC8 /* EmpresaDetalhesHorarioFuncionamentoViewCell.xib */,
+				FD4949011CB35DFB00629EC8 /* EmpresaDetalhesHorarioFuncionamentoViewCell.swift */,
+				FD68AC9D1CB926D00082C505 /* EmpresaDetalhesLocalizacaoViewCell.xib */,
+				FD68AC9C1CB926D00082C505 /* EmpresaDetalhesLocalizacaoViewCell.swift */,
+			);
+			name = EmpresasReservarHorario;
+			sourceTree = "<group>";
+		};
+		FD68ACA61CB9D4A00082C505 /* DetalhesReserva */ = {
+			isa = PBXGroup;
+			children = (
+				FD68ACA91CB9F2720082C505 /* DetalheReservaViewCell.xib */,
+				FD68ACA71CB9F25D0082C505 /* DetalheReservaViewCell.swift */,
+			);
+			name = DetalhesReserva;
+			sourceTree = "<group>";
+		};
+		FD7FA5561CB88ED500F7D65B /* EmpresaCalendario */ = {
+			isa = PBXGroup;
+			children = (
+				FD7FA5571CB8912500F7D65B /* CalendarioEmpresaHeaderView.xib */,
+				FD68ACA01CB926F40082C505 /* CalendarioEmpresaHeaderView.swift */,
+				FD68ACA21CB9270A0082C505 /* CalendarioBotaoReservarViewCell.xib */,
+				FD68AC9A1CB9269C0082C505 /* CalendarioBotaoReservarViewCell.swift */,
+			);
+			name = EmpresaCalendario;
+			sourceTree = "<group>";
+		};
 		FDADF34F1C710EF4000708A0 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +285,8 @@
 				FDADF3711C710EF4000708A0 /* OneSecAppTests */,
 				FDADF37C1C710EF4000708A0 /* OneSecAppUITests */,
 				FDADF3591C710EF4000708A0 /* Products */,
+				93A9597EB774ABC055B8C188 /* Pods */,
+				78FEBA44477A986BE27CA6A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +303,12 @@
 		FDADF35A1C710EF4000708A0 /* OneSecApp */ = {
 			isa = PBXGroup;
 			children = (
-				FDADF35B1C710EF4000708A0 /* AppDelegate.swift */,
-				FDADF35D1C710EF4000708A0 /* FirstViewController.swift */,
-				FDADF35F1C710EF4000708A0 /* SecondViewController.swift */,
-				FDADF3611C710EF4000708A0 /* Main.storyboard */,
-				FDADF3641C710EF4000708A0 /* Assets.xcassets */,
-				FDADF3661C710EF4000708A0 /* LaunchScreen.storyboard */,
-				FDADF3691C710EF4000708A0 /* Info.plist */,
+				FDC349F31C7A2E99003831B4 /* Application */,
+				FDC349F21C7A2E80003831B4 /* Controllers */,
+				FDADF3931C711D13000708A0 /* Views */,
+				FDADF3961C711ED0000708A0 /* DataTransferObjects */,
+				FD4496C71CBB3ECB00FB55B1 /* DataObjects */,
+				FDDB21321C9A3C5B00CE787C /* Classes */,
 			);
 			path = OneSecApp;
 			sourceTree = "<group>";
@@ -128,6 +331,73 @@
 			path = OneSecAppUITests;
 			sourceTree = "<group>";
 		};
+		FDADF3931C711D13000708A0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FD4948C81CB33F6C00629EC8 /* Empresas */,
+				FD4948CC1CB3497100629EC8 /* EmpresasReservarHorario */,
+				FD7FA5561CB88ED500F7D65B /* EmpresaCalendario */,
+				FD4948C91CB33F9E00629EC8 /* MinhasReservas */,
+				FD68ACA61CB9D4A00082C505 /* DetalhesReserva */,
+				FD4948EB1CB34A8B00629EC8 /* DefaultTableViewCell.swift */,
+				FD4948EC1CB34A8B00629EC8 /* DefaultTableViewCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		FDADF3961C711ED0000708A0 /* DataTransferObjects */ = {
+			isa = PBXGroup;
+			children = (
+				FDDB21301C9A3B5C00CE787C /* HorarioEmpresaDTO.swift */,
+				FD6B29301CAB660A00F5EB1E /* CompanyDTO.swift */,
+				FD6B29341CAB67F900F5EB1E /* ReservaDTO.swift */,
+			);
+			name = DataTransferObjects;
+			sourceTree = "<group>";
+		};
+		FDC349F21C7A2E80003831B4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FD4948D21CB34A1C00629EC8 /* Login.swift */,
+				FD4496C51CBB1B7900FB55B1 /* LoginDados.swift */,
+				FD4948CE1CB34A1C00629EC8 /* Empresas.swift */,
+				FD4948CF1CB34A1C00629EC8 /* DetalhesEmpresa.swift */,
+				FD4948D11CB34A1C00629EC8 /* HorariosEmpresa.swift */,
+				FD4948D01CB34A1C00629EC8 /* Favoritos.swift */,
+				FD4948D31CB34A1C00629EC8 /* MinhasReservas.swift */,
+				FD68ACA41CB9B78D0082C505 /* DetalhesReserva.swift */,
+				FD4948CD1CB34A1C00629EC8 /* Configuracoes.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		FDC349F31C7A2E99003831B4 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FDADF35B1C710EF4000708A0 /* AppDelegate.swift */,
+				FDADF3611C710EF4000708A0 /* Main.storyboard */,
+				FDADF3641C710EF4000708A0 /* Assets.xcassets */,
+				FDADF3661C710EF4000708A0 /* LaunchScreen.storyboard */,
+				FDADF3691C710EF4000708A0 /* Info.plist */,
+				FD6B292D1CAB611400F5EB1E /* OneSecModel.xcdatamodeld */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		FDDB21321C9A3C5B00CE787C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FD4496CA1CBB414D00FB55B1 /* JsonParse.swift */,
+				FDDB21331C9A3C7E00CE787C /* Webservice.swift */,
+				FD50D0C41CB12AC000E6C52F /* Util.swift */,
+				FD50D0C61CB12BC200E6C52F /* Gotham-Book.otf */,
+				FD50D0C71CB12BC200E6C52F /* Gotham-Light.otf */,
+				FD50D0C81CB12BC200E6C52F /* Gotham-Medium.otf */,
+				FD50D0CE1CB13A1B00E6C52F /* Gotham-Bold.otf */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +405,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDADF3821C710EF4000708A0 /* Build configuration list for PBXNativeTarget "OneSecApp" */;
 			buildPhases = (
+				F4CD170284F1A5506FCC5B2C /* Check Pods Manifest.lock */,
 				FDADF3541C710EF4000708A0 /* Sources */,
 				FDADF3551C710EF4000708A0 /* Frameworks */,
 				FDADF3561C710EF4000708A0 /* Resources */,
+				8E902A9D4893896ACEAEB49B /* Embed Pods Frameworks */,
+				611CCD87BEDC7453CC824A48 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +425,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDADF3851C710EF4000708A0 /* Build configuration list for PBXNativeTarget "OneSecAppTests" */;
 			buildPhases = (
+				6B6D111F95ABA5D232B1D4C0 /* Check Pods Manifest.lock */,
 				FDADF36A1C710EF4000708A0 /* Sources */,
 				FDADF36B1C710EF4000708A0 /* Frameworks */,
 				FDADF36C1C710EF4000708A0 /* Resources */,
+				AFA9991741D905AA88F40A67 /* Embed Pods Frameworks */,
+				12625EFDA9EB66FC35504174 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +446,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDADF3881C710EF4000708A0 /* Build configuration list for PBXNativeTarget "OneSecAppUITests" */;
 			buildPhases = (
+				007A37D3B7EEB17977864BEB /* Check Pods Manifest.lock */,
 				FDADF3751C710EF4000708A0 /* Sources */,
 				FDADF3761C710EF4000708A0 /* Frameworks */,
 				FDADF3771C710EF4000708A0 /* Resources */,
+				0B1CF05AA3067874CA631445 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,6 +474,7 @@
 				TargetAttributes = {
 					FDADF3571C710EF4000708A0 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 5W5T84892S;
 					};
 					FDADF36D1C710EF4000708A0 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -232,8 +511,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD68ACA31CB9270A0082C505 /* CalendarioBotaoReservarViewCell.xib in Resources */,
+				FD68ACAA1CB9F2720082C505 /* DetalheReservaViewCell.xib in Resources */,
+				FD50D0CF1CB13A2900E6C52F /* Gotham-Bold.otf in Resources */,
+				FD50D0C91CB12BFF00E6C52F /* Gotham-Book.otf in Resources */,
+				FD4948F41CB34C5E00629EC8 /* BotaoReservarHorarioViewCell.xib in Resources */,
+				FD68AC9F1CB926D00082C505 /* EmpresaDetalhesLocalizacaoViewCell.xib in Resources */,
+				FD7FA5581CB8912500F7D65B /* CalendarioEmpresaHeaderView.xib in Resources */,
+				FD4948F01CB34B5900629EC8 /* EmpresaReservaHorarioHeaderTableViewCell.xib in Resources */,
+				FD4948E21CB34A6600629EC8 /* ListaEmpresasHeader.xib in Resources */,
+				FD4948E81CB34A8000629EC8 /* MinhaReservaTableViewCell.xib in Resources */,
+				FD4948EE1CB34A8B00629EC8 /* DefaultTableViewCell.xib in Resources */,
+				FD50D0CA1CB12BFF00E6C52F /* Gotham-Light.otf in Resources */,
+				FD4948EA1CB34A8000629EC8 /* ReservaTableViewHeader.xib in Resources */,
+				FD50D0CB1CB12BFF00E6C52F /* Gotham-Medium.otf in Resources */,
 				FDADF3681C710EF4000708A0 /* LaunchScreen.storyboard in Resources */,
+				FD4948E01CB34A6600629EC8 /* EmpresaTableViewCell.xib in Resources */,
+				FD4949001CB35DEB00629EC8 /* EmpresaDetalhesHorarioFuncionamentoViewCell.xib in Resources */,
 				FDADF3651C710EF4000708A0 /* Assets.xcassets in Resources */,
+				FD4948FA1CB35AB000629EC8 /* EmpresaDetalhesDescricaoViewCell.xib in Resources */,
 				FDADF3631C710EF4000708A0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,14 +550,166 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		007A37D3B7EEB17977864BEB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0B1CF05AA3067874CA631445 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneSecAppUITests/Pods-OneSecAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		12625EFDA9EB66FC35504174 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneSecAppTests/Pods-OneSecAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		611CCD87BEDC7453CC824A48 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneSecApp/Pods-OneSecApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B6D111F95ABA5D232B1D4C0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8E902A9D4893896ACEAEB49B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneSecApp/Pods-OneSecApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFA9991741D905AA88F40A67 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneSecAppTests/Pods-OneSecAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4CD170284F1A5506FCC5B2C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FDADF3541C710EF4000708A0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDADF3601C710EF4000708A0 /* SecondViewController.swift in Sources */,
+				FD4948E11CB34A6600629EC8 /* ListaEmpresasHeader.swift in Sources */,
+				FD4496C61CBB1B7900FB55B1 /* LoginDados.swift in Sources */,
+				FD50D0C51CB12AC000E6C52F /* Util.swift in Sources */,
+				FDDB21311C9A3B5C00CE787C /* HorarioEmpresaDTO.swift in Sources */,
+				FD4948D41CB34A1C00629EC8 /* Configuracoes.swift in Sources */,
+				FD68ACA81CB9F25D0082C505 /* DetalheReservaViewCell.swift in Sources */,
+				FD4948E91CB34A8000629EC8 /* ReservaTableViewHeader.swift in Sources */,
+				FDDB21341C9A3C7E00CE787C /* Webservice.swift in Sources */,
+				FD4496C91CBB3EFD00FB55B1 /* EmpresaNSManagedObject.swift in Sources */,
+				FD4948D71CB34A1C00629EC8 /* Favoritos.swift in Sources */,
+				FD4948FE1CB35AFE00629EC8 /* EmpresaDetalhesDescricaoViewCell.swift in Sources */,
+				FD4949021CB35DFB00629EC8 /* EmpresaDetalhesHorarioFuncionamentoViewCell.swift in Sources */,
+				FD68ACA11CB926F40082C505 /* CalendarioEmpresaHeaderView.swift in Sources */,
+				FD68ACA51CB9B78D0082C505 /* DetalhesReserva.swift in Sources */,
 				FDADF35C1C710EF4000708A0 /* AppDelegate.swift in Sources */,
-				FDADF35E1C710EF4000708A0 /* FirstViewController.swift in Sources */,
+				FD4948DA1CB34A1C00629EC8 /* MinhasReservas.swift in Sources */,
+				FD6B29311CAB660A00F5EB1E /* CompanyDTO.swift in Sources */,
+				FD4948D51CB34A1C00629EC8 /* Empresas.swift in Sources */,
+				FD4948DF1CB34A6600629EC8 /* EmpresaTableViewCell.swift in Sources */,
+				FD68AC9B1CB9269C0082C505 /* CalendarioBotaoReservarViewCell.swift in Sources */,
+				FD68AC9E1CB926D00082C505 /* EmpresaDetalhesLocalizacaoViewCell.swift in Sources */,
+				FD4948E71CB34A8000629EC8 /* MinhaReservaTableViewCell.swift in Sources */,
+				FD4948ED1CB34A8B00629EC8 /* DefaultTableViewCell.swift in Sources */,
+				FD4948F21CB34BEB00629EC8 /* EmpresaReservaHorarioHeaderTableViewCell.swift in Sources */,
+				FD6B29331CAB675800F5EB1E /* ReservaNSManagedObject.swift in Sources */,
+				FD4948D91CB34A1C00629EC8 /* Login.swift in Sources */,
+				FD6B29351CAB67F900F5EB1E /* ReservaDTO.swift in Sources */,
+				FD4948D61CB34A1C00629EC8 /* DetalhesEmpresa.swift in Sources */,
+				FD4948F61CB34C6D00629EC8 /* BotaoReservarHorarioViewCell.swift in Sources */,
+				FD6B292F1CAB611400F5EB1E /* OneSecModel.xcdatamodeld in Sources */,
+				FD4948D81CB34A1C00629EC8 /* HorariosEmpresa.swift in Sources */,
+				FD4496CB1CBB414D00FB55B1 /* JsonParse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,28 +847,37 @@
 		};
 		FDADF3831C710EF4000708A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98CDB4FFEBA02FF9BFB5B68D /* Pods-OneSecApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = OneSecApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rl.OneSecApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		FDADF3841C710EF4000708A0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95C569134E5B3B7B613B129E /* Pods-OneSecApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = OneSecApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rl.OneSecApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
 		FDADF3861C710EF4000708A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 898B18B08885FFE8E8C1C367 /* Pods-OneSecAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = OneSecAppTests/Info.plist;
@@ -433,6 +890,7 @@
 		};
 		FDADF3871C710EF4000708A0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7F3A6AAFBC089C22D31A750 /* Pods-OneSecAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = OneSecAppTests/Info.plist;
@@ -445,6 +903,7 @@
 		};
 		FDADF3891C710EF4000708A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5082F098F140EE143736D31C /* Pods-OneSecAppUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = OneSecAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -457,6 +916,7 @@
 		};
 		FDADF38A1C710EF4000708A0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1278D371108A1AC9677306AF /* Pods-OneSecAppUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = OneSecAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -486,6 +946,7 @@
 				FDADF3841C710EF4000708A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FDADF3851C710EF4000708A0 /* Build configuration list for PBXNativeTarget "OneSecAppTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +955,7 @@
 				FDADF3871C710EF4000708A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FDADF3881C710EF4000708A0 /* Build configuration list for PBXNativeTarget "OneSecAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,8 +964,22 @@
 				FDADF38A1C710EF4000708A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FD6B292D1CAB611400F5EB1E /* OneSecModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FD6B292E1CAB611400F5EB1E /* OneSecModel.xcdatamodel */,
+			);
+			currentVersion = FD6B292E1CAB611400F5EB1E /* OneSecModel.xcdatamodel */;
+			path = OneSecModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FDADF3501C710EF4000708A0 /* Project object */;
 }
