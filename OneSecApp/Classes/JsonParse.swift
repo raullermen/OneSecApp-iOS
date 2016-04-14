@@ -32,4 +32,26 @@ class JsonParse {
         
         return nil
     }
+    
+    class func ParseFuncionarios(JSON: AnyObject) -> Array<ProfissionalDTO>? {
+        
+        if let profissionais = JSON["employees"] as? NSArray {
+            
+            var profissionalList = Array<ProfissionalDTO>()
+            
+            for profissional in profissionais {
+                let funcdto = ProfissionalDTO()
+                
+                funcdto.Id = profissional["id"] as! Int
+                funcdto.Company_id = profissional["company_id"] as! Int
+                funcdto.Name = profissional["name"] as! String
+                
+                profissionalList.append(funcdto)
+            }
+            
+            return profissionalList
+        }
+        
+        return nil
+    }
 }

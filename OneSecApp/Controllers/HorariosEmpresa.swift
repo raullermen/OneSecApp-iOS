@@ -35,7 +35,7 @@ class HorariosEmpresa: UIViewController, JTCalendarDelegate {
         
         _listaHorario = _webservice.RetornaListaHorarios()
         
-        // Do any additional setup after loading the view.
+        [NSUserDefaults .standardUserDefaults() .setInteger(0, forKey: "idProfissional")]
     }
     
     // MARK: LAYOUT

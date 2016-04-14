@@ -14,7 +14,6 @@ class Webservice  {
     let URLBase = "https://onesecapi.herokuapp.com/api/v1/"
     
     func GetCompanies(completion: (erro: String?, listaEmpresas: Array<CompanyDTO>?) -> Void){
-        
         Alamofire.request(.GET, self.URLBase + "/companies").responseJSON
             { response in switch response.result {
             case .Success(let JSON):
@@ -22,6 +21,18 @@ class Webservice  {
             case .Failure(let error):
                 print("Request failed with error: \(error)")
                 completion(erro: error.localizedDescription, listaEmpresas: nil)
+            }
+        }
+    }
+    
+    func GetEmployees(empresaId: Int, completion: (erro: String?, listaProfissionais: Array<ProfissionalDTO>?) -> Void){
+        Alamofire.request(.GET, self.URLBase + "/employees/company/" + String(empresaId)).responseJSON
+            { response in switch response.result {
+            case .Success(let JSON):
+                completion(erro: nil, listaProfissionais: JsonParse.ParseFuncionarios(JSON))
+            case .Failure(let error):
+                print("Request failed with error: \(error)")
+                completion(erro: error.localizedDescription, listaProfissionais: nil)
             }
         }
     }

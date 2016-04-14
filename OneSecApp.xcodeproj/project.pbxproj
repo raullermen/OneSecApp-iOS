@@ -13,6 +13,12 @@
 		FD4496C61CBB1B7900FB55B1 /* LoginDados.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4496C51CBB1B7900FB55B1 /* LoginDados.swift */; };
 		FD4496C91CBB3EFD00FB55B1 /* EmpresaNSManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4496C81CBB3EFD00FB55B1 /* EmpresaNSManagedObject.swift */; };
 		FD4496CB1CBB414D00FB55B1 /* JsonParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4496CA1CBB414D00FB55B1 /* JsonParse.swift */; };
+		FD4496CD1CBC928A00FB55B1 /* EmpresaReservaPopupViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD4496CC1CBC928A00FB55B1 /* EmpresaReservaPopupViewCell.xib */; };
+		FD4496CF1CBC929700FB55B1 /* EmpresaReservaPopupViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4496CE1CBC929700FB55B1 /* EmpresaReservaPopupViewCell.swift */; };
+		FD4496D21CBDAF6900FB55B1 /* EmpresaPopupTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4496D11CBDAF6800FB55B1 /* EmpresaPopupTableView.swift */; };
+		FD4496D41CBDB93B00FB55B1 /* ProfissionalDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4496D31CBDB93A00FB55B1 /* ProfissionalDTO.swift */; };
+		FD4496DA1CBDDC9300FB55B1 /* EmpresaReservaPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD4496D91CBDDC9300FB55B1 /* EmpresaReservaPopView.xib */; };
+		FD4496DC1CBDDCB100FB55B1 /* EmpresaReservaPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4496DB1CBDDCB100FB55B1 /* EmpresaReservaPopView.swift */; };
 		FD4948D41CB34A1C00629EC8 /* Configuracoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4948CD1CB34A1C00629EC8 /* Configuracoes.swift */; };
 		FD4948D51CB34A1C00629EC8 /* Empresas.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4948CE1CB34A1C00629EC8 /* Empresas.swift */; };
 		FD4948D61CB34A1C00629EC8 /* DetalhesEmpresa.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4948CF1CB34A1C00629EC8 /* DetalhesEmpresa.swift */; };
@@ -97,6 +103,12 @@
 		FD4496C51CBB1B7900FB55B1 /* LoginDados.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginDados.swift; path = Controllers/LoginDados.swift; sourceTree = "<group>"; };
 		FD4496C81CBB3EFD00FB55B1 /* EmpresaNSManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmpresaNSManagedObject.swift; sourceTree = "<group>"; };
 		FD4496CA1CBB414D00FB55B1 /* JsonParse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JsonParse.swift; path = Classes/JsonParse.swift; sourceTree = "<group>"; };
+		FD4496CC1CBC928A00FB55B1 /* EmpresaReservaPopupViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmpresaReservaPopupViewCell.xib; sourceTree = "<group>"; };
+		FD4496CE1CBC929700FB55B1 /* EmpresaReservaPopupViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmpresaReservaPopupViewCell.swift; sourceTree = "<group>"; };
+		FD4496D11CBDAF6800FB55B1 /* EmpresaPopupTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmpresaPopupTableView.swift; path = ViewClasses/EmpresaPopupTableView.swift; sourceTree = "<group>"; };
+		FD4496D31CBDB93A00FB55B1 /* ProfissionalDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfissionalDTO.swift; path = DataTransferObjects/ProfissionalDTO.swift; sourceTree = "<group>"; };
+		FD4496D91CBDDC9300FB55B1 /* EmpresaReservaPopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmpresaReservaPopView.xib; sourceTree = "<group>"; };
+		FD4496DB1CBDDCB100FB55B1 /* EmpresaReservaPopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmpresaReservaPopView.swift; path = Views/EmpresasReservarHorario/EmpresaReservaPopView.swift; sourceTree = "<group>"; };
 		FD4948CD1CB34A1C00629EC8 /* Configuracoes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configuracoes.swift; path = Controllers/Configuracoes.swift; sourceTree = "<group>"; };
 		FD4948CE1CB34A1C00629EC8 /* Empresas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Empresas.swift; path = Controllers/Empresas.swift; sourceTree = "<group>"; };
 		FD4948CF1CB34A1C00629EC8 /* DetalhesEmpresa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetalhesEmpresa.swift; path = Controllers/DetalhesEmpresa.swift; sourceTree = "<group>"; };
@@ -219,6 +231,14 @@
 			name = DataObjects;
 			sourceTree = "<group>";
 		};
+		FD4496D01CBDAF3100FB55B1 /* ViewClasses */ = {
+			isa = PBXGroup;
+			children = (
+				FD4496D11CBDAF6800FB55B1 /* EmpresaPopupTableView.swift */,
+			);
+			name = ViewClasses;
+			sourceTree = "<group>";
+		};
 		FD4948C81CB33F6C00629EC8 /* Empresas */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +274,10 @@
 				FD4949011CB35DFB00629EC8 /* EmpresaDetalhesHorarioFuncionamentoViewCell.swift */,
 				FD68AC9D1CB926D00082C505 /* EmpresaDetalhesLocalizacaoViewCell.xib */,
 				FD68AC9C1CB926D00082C505 /* EmpresaDetalhesLocalizacaoViewCell.swift */,
+				FD4496D91CBDDC9300FB55B1 /* EmpresaReservaPopView.xib */,
+				FD4496DB1CBDDCB100FB55B1 /* EmpresaReservaPopView.swift */,
+				FD4496CC1CBC928A00FB55B1 /* EmpresaReservaPopupViewCell.xib */,
+				FD4496CE1CBC929700FB55B1 /* EmpresaReservaPopupViewCell.swift */,
 			);
 			name = EmpresasReservarHorario;
 			sourceTree = "<group>";
@@ -308,6 +332,7 @@
 				FDADF3931C711D13000708A0 /* Views */,
 				FDADF3961C711ED0000708A0 /* DataTransferObjects */,
 				FD4496C71CBB3ECB00FB55B1 /* DataObjects */,
+				FD4496D01CBDAF3100FB55B1 /* ViewClasses */,
 				FDDB21321C9A3C5B00CE787C /* Classes */,
 			);
 			path = OneSecApp;
@@ -351,6 +376,7 @@
 				FDDB21301C9A3B5C00CE787C /* HorarioEmpresaDTO.swift */,
 				FD6B29301CAB660A00F5EB1E /* CompanyDTO.swift */,
 				FD6B29341CAB67F900F5EB1E /* ReservaDTO.swift */,
+				FD4496D31CBDB93A00FB55B1 /* ProfissionalDTO.swift */,
 			);
 			name = DataTransferObjects;
 			sourceTree = "<group>";
@@ -527,9 +553,11 @@
 				FD50D0CB1CB12BFF00E6C52F /* Gotham-Medium.otf in Resources */,
 				FDADF3681C710EF4000708A0 /* LaunchScreen.storyboard in Resources */,
 				FD4948E01CB34A6600629EC8 /* EmpresaTableViewCell.xib in Resources */,
+				FD4496DA1CBDDC9300FB55B1 /* EmpresaReservaPopView.xib in Resources */,
 				FD4949001CB35DEB00629EC8 /* EmpresaDetalhesHorarioFuncionamentoViewCell.xib in Resources */,
 				FDADF3651C710EF4000708A0 /* Assets.xcassets in Resources */,
 				FD4948FA1CB35AB000629EC8 /* EmpresaDetalhesDescricaoViewCell.xib in Resources */,
+				FD4496CD1CBC928A00FB55B1 /* EmpresaReservaPopupViewCell.xib in Resources */,
 				FDADF3631C710EF4000708A0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -678,8 +706,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD4496DC1CBDDCB100FB55B1 /* EmpresaReservaPopView.swift in Sources */,
 				FD4948E11CB34A6600629EC8 /* ListaEmpresasHeader.swift in Sources */,
 				FD4496C61CBB1B7900FB55B1 /* LoginDados.swift in Sources */,
+				FD4496CF1CBC929700FB55B1 /* EmpresaReservaPopupViewCell.swift in Sources */,
 				FD50D0C51CB12AC000E6C52F /* Util.swift in Sources */,
 				FDDB21311C9A3B5C00CE787C /* HorarioEmpresaDTO.swift in Sources */,
 				FD4948D41CB34A1C00629EC8 /* Configuracoes.swift in Sources */,
@@ -705,9 +735,11 @@
 				FD6B29331CAB675800F5EB1E /* ReservaNSManagedObject.swift in Sources */,
 				FD4948D91CB34A1C00629EC8 /* Login.swift in Sources */,
 				FD6B29351CAB67F900F5EB1E /* ReservaDTO.swift in Sources */,
+				FD4496D21CBDAF6900FB55B1 /* EmpresaPopupTableView.swift in Sources */,
 				FD4948D61CB34A1C00629EC8 /* DetalhesEmpresa.swift in Sources */,
 				FD4948F61CB34C6D00629EC8 /* BotaoReservarHorarioViewCell.swift in Sources */,
 				FD6B292F1CAB611400F5EB1E /* OneSecModel.xcdatamodeld in Sources */,
+				FD4496D41CBDB93B00FB55B1 /* ProfissionalDTO.swift in Sources */,
 				FD4948D81CB34A1C00629EC8 /* HorariosEmpresa.swift in Sources */,
 				FD4496CB1CBB414D00FB55B1 /* JsonParse.swift in Sources */,
 			);

@@ -23,24 +23,40 @@
     </customFonts>
     <scenes>
         <!--Empresa-->
-        <scene sceneID="33a-VF-Zr4">
+        <scene sceneID="0yl-Az-yOU">
             <objects>
-                <tableViewController id="3Um-jO-aIy" customClass="DetalhesEmpresa" customModule="OneSecApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="114" sectionHeaderHeight="28" sectionFooterHeight="28" id="phj-b2-frs" customClass="EmpresaReservarHorario">
+                <viewController id="jFN-Kt-3wl" customClass="DetalhesEmpresa" customModule="OneSecApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="euS-9Y-P7f"/>
+                        <viewControllerLayoutGuide type="bottom" id="054-69-jUb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1qx-hz-f4B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bfM-wl-IVq">
+                                <rect key="frame" x="-4" y="4" width="383" height="664"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections/>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Empresa" id="W69-Er-ehJ">
-                        <barButtonItem key="backBarButtonItem" title=" " id="Idn-gd-JCo"/>
+                        <constraints>
+                            <constraint firstItem="bfM-wl-IVq" firstAttribute="top" secondItem="euS-9Y-P7f" secondAttribute="bottom" constant="-60" id="TfA-p9-YIM"/>
+                            <constraint firstItem="054-69-jUb" firstAttribute="top" secondItem="bfM-wl-IVq" secondAttribute="bottom" constant="-50" id="UsM-eC-LqA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bfM-wl-IVq" secondAttribute="trailing" constant="-20" id="dqN-yw-Msd"/>
+                            <constraint firstItem="bfM-wl-IVq" firstAttribute="leading" secondItem="1qx-hz-f4B" secondAttribute="leadingMargin" constant="-20" id="oG4-DD-fgF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Empresa" id="5vu-91-xU2">
+                        <barButtonItem key="backBarButtonItem" title=" " id="e8C-5L-byd"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <segue destination="46t-4Q-P9H" kind="push" identifier="segueCalendarioEmpresa" id="cmw-1c-6yN"/>
+                        <outlet property="table" destination="bfM-wl-IVq" id="6ao-Cw-kEc"/>
+                        <segue destination="46t-4Q-P9H" kind="push" identifier="segueCalendarioEmpresa" id="RcI-gb-5Vk"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="q3d-cH-djd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hAj-Ty-dQN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1720.5" y="-194.5"/>
         </scene>
@@ -160,7 +176,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="table" destination="Hjh-iN-f6R" id="hPv-V0-uak"/>
-                        <segue destination="3Um-jO-aIy" kind="show" identifier="segueEmpresaDetalhes" id="YCC-Ht-ssm"/>
+                        <segue destination="jFN-Kt-3wl" kind="show" identifier="segueEmpresaDetalhes" id="LQI-3J-vcC"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JBW-uG-2EC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -256,7 +272,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="table" destination="uL3-xo-Irq" id="h0d-vn-03B"/>
-                        <segue destination="3Um-jO-aIy" kind="show" identifier="segueEmpresaDetalhes" id="kEm-DG-k95"/>
+                        <segue destination="jFN-Kt-3wl" kind="show" identifier="segueEmpresaDetalhes" id="VVd-8w-6mh"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I24-Hy-jVO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -657,6 +673,6 @@
         <image name="imagem_face" width="500" height="333"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kEm-DG-k95"/>
+        <segue reference="VVd-8w-6mh"/>
     </inferredMetricsTieBreakers>
 </document>

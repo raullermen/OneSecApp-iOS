@@ -54,12 +54,6 @@ class Favoritos: UITableViewController {
         let cell = self.table?.cellForRowAtIndexPath(NSIndexPath(forItem: indexPath.row, inSection: 0)) as! EmpresaTableViewCell
         cell.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         
-        //let codigoLinhaSelecionada = cell.CodigoLinha.text
-        //let nomeLinhaSelecionada = cell.TituloLinha.text
-        
-        //[NSUserDefaults .standardUserDefaults() .setObject(codigoLinhaSelecionada, forKey: "CodigoLinhaSelecionada")]
-        //[NSUserDefaults .standardUserDefaults() .setObject(nomeLinhaSelecionada, forKey: "NomeLinhaSelecionada")]
-        
         self.performSegueWithIdentifier("segueEmpresaDetalhes", sender: self)
     }
 

@@ -11,7 +11,7 @@ import UIKit
 class MinhasReservas: UITableViewController {
 
     let SCREENSIZE: CGRect = UIScreen.mainScreen().bounds
-    var ListaSectionTitles = NSArray()
+    var _listaSectionTitles = NSArray()
     
     @IBOutlet var table: UITableView!
     
@@ -68,15 +68,6 @@ class MinhasReservas: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.table?.deselectRowAtIndexPath(indexPath, animated: true)
-        //let cell = self.table?.cellForRowAtIndexPath(NSIndexPath(forItem: indexPath.row, inSection: 0)) as! ReservaTableViewCell
-        //cell.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
-        
-        //let codigoLinhaSelecionada = cell.CodigoLinha.text
-        //let nomeLinhaSelecionada = cell.TituloLinha.text
-        
-        //[NSUserDefaults .standardUserDefaults() .setObject(codigoLinhaSelecionada, forKey: "CodigoLinhaSelecionada")]
-        //[NSUserDefaults .standardUserDefaults() .setObject(nomeLinhaSelecionada, forKey: "NomeLinhaSelecionada")]
-        
         self.performSegueWithIdentifier("segueDetalhesReserva", sender: self)
     }
     

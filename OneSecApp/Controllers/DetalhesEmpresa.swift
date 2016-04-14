@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import STPopup
 
-class DetalhesEmpresa: UITableViewController {
+class DetalhesEmpresa: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     let SCREENSIZE: CGRect = UIScreen.mainScreen().bounds
     
@@ -17,6 +18,17 @@ class DetalhesEmpresa: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         AjustaLayout()
+        table.delegate = self
+        table.dataSource = self
+        
+        [NSUserDefaults .standardUserDefaults() .setInteger(0, forKey: "idProfissional")]
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        if NSUserDefaults().integerForKey("idProfissional") > 0 {
+            self.hidesBottomBarWhenPushed = true
+            self.performSegueWithIdentifier("segueCalendarioEmpresa", sender: nil)
+        }
     }
     
     // MARK: LAYOUT
@@ -33,42 +45,42 @@ class DetalhesEmpresa: UITableViewController {
     }
     
     // MARK: TABLE VIEW
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            self.tableView.registerNib(UINib(nibName: "EmpresaReservaHorarioHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "EmpresaReservaHorarioHeaderTableViewCell")
+            self.table.registerNib(UINib(nibName: "EmpresaReservaHorarioHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "EmpresaReservaHorarioHeaderTableViewCell")
             let cell = tableView.dequeueReusableCellWithIdentifier("EmpresaReservaHorarioHeaderTableViewCell", forIndexPath: indexPath) as! EmpresaReservaHorarioHeaderTableViewCell
             
             return cell
             
         }
         else if indexPath.row == 1 {
-            self.tableView.registerNib(UINib(nibName: "BotaoReservarHorarioViewCell", bundle: nil), forCellReuseIdentifier: "BotaoReservarHorarioViewCell")
+            self.table.registerNib(UINib(nibName: "BotaoReservarHorarioViewCell", bundle: nil), forCellReuseIdentifier: "BotaoReservarHorarioViewCell")
             let cell = tableView.dequeueReusableCellWithIdentifier("BotaoReservarHorarioViewCell", forIndexPath: indexPath) as! BotaoReservarHorarioViewCell
             
             return cell
         }
         else if indexPath.row == 2 {
-            self.tableView.registerNib(UINib(nibName: "EmpresaDetalhesDescricaoViewCell", bundle: nil), forCellReuseIdentifier: "EmpresaDetalhesDescricaoViewCell")
+            self.table.registerNib(UINib(nibName: "EmpresaDetalhesDescricaoViewCell", bundle: nil), forCellReuseIdentifier: "EmpresaDetalhesDescricaoViewCell")
             let cell = tableView.dequeueReusableCellWithIdentifier("EmpresaDetalhesDescricaoViewCell", forIndexPath: indexPath) as! EmpresaDetalhesDescricaoViewCell
             
             return cell
         }
         else if indexPath.row == 3 {
-            self.tableView.registerNib(UINib(nibName: "EmpresaDetalhesHorarioFuncionamentoViewCell", bundle: nil), forCellReuseIdentifier: "EmpresaDetalhesHorarioFuncionamentoViewCell")
+            self.table.registerNib(UINib(nibName: "EmpresaDetalhesHorarioFuncionamentoViewCell", bundle: nil), forCellReuseIdentifier: "EmpresaDetalhesHorarioFuncionamentoViewCell")
             let cell = tableView.dequeueReusableCellWithIdentifier("EmpresaDetalhesHorarioFuncionamentoViewCell", forIndexPath: indexPath) as! EmpresaDetalhesHorarioFuncionamentoViewCell
             
             return cell
         }
         else {
-            self.tableView.registerNib(UINib(nibName: "EmpresaDetalhesLocalizacaoViewCell", bundle: nil), forCellReuseIdentifier: "EmpresaDetalhesLocalizacaoViewCell")
+            self.table.registerNib(UINib(nibName: "EmpresaDetalhesLocalizacaoViewCell", bundle: nil), forCellReuseIdentifier: "EmpresaDetalhesLocalizacaoViewCell")
             let cell = tableView.dequeueReusableCellWithIdentifier("EmpresaDetalhesLocalizacaoViewCell", forIndexPath: indexPath) as! EmpresaDetalhesLocalizacaoViewCell
             
             return cell
@@ -76,7 +88,7 @@ class DetalhesEmpresa: UITableViewController {
 
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.row == 0 {
             return CGFloat(self.SCREENSIZE.width / 2.2)
         }
@@ -94,11 +106,26 @@ class DetalhesEmpresa: UITableViewController {
         }
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         if indexPath.row == 1 {
-            self.hidesBottomBarWhenPushed = true
-            self.performSegueWithIdentifier("segueCalendarioEmpresa", sender: nil)
+
+            let _popViewController = NSBundle.mainBundle().loadNibNamed("EmpresaReservaPopView", owner: self, options: nil).first as! UITableViewController
+            
+            let popup = STPopupController(rootViewController: _popViewController)
+            
+            popup.navigationBar.barTintColor = Util.AppVermelho()
+            popup.navigationBar.tintColor = UIColor.whiteColor()
+            popup.navigationBar.barStyle = .Default
+            
+            let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "GothamBold", size: 17.0)!]
+
+            popup.navigationBar.titleTextAttributes = titleDict as? [String : AnyObject]
+            
+            popup.cornerRadius = 15
+            popup.presentInViewController(self)
+            
+            
         }
     }
 }

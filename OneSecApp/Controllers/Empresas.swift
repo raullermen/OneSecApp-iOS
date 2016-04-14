@@ -14,7 +14,7 @@ class Empresas: UITableViewController {
     
     @IBOutlet var table: UITableView!
     
-    var consultaExecutada = Bool()
+    var _consultaExecutada = Bool()
     var _listaEmpresas = Array<CompanyDTO>()
     
     override func viewDidLoad() {
@@ -43,7 +43,7 @@ class Empresas: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if consultaExecutada {
+        if _consultaExecutada {
             return _listaEmpresas.count
         }else{
             return 10
@@ -83,12 +83,7 @@ class Empresas: UITableViewController {
         self.table?.deselectRowAtIndexPath(indexPath, animated: true)
         let cell = self.table?.cellForRowAtIndexPath(NSIndexPath(forItem: indexPath.row, inSection: 0)) as! EmpresaTableViewCell
         cell.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
-        
-        //let codigoLinhaSelecionada = cell.CodigoLinha.text
-        //let nomeLinhaSelecionada = cell.TituloLinha.text
-        
-        //[NSUserDefaults .standardUserDefaults() .setObject(codigoLinhaSelecionada, forKey: "CodigoLinhaSelecionada")]
-        //[NSUserDefaults .standardUserDefaults() .setObject(nomeLinhaSelecionada, forKey: "NomeLinhaSelecionada")]
+
         self.performSegueWithIdentifier("segueEmpresaDetalhes", sender: self)
     }
     
@@ -102,7 +97,7 @@ class Empresas: UITableViewController {
             }else{
                 self._listaEmpresas.appendContentsOf(listaEmpresas!)
                 dispatch_async(dispatch_get_main_queue(),{
-                    self.consultaExecutada = true
+                    self._consultaExecutada = true
                     self.table?.reloadData()
                 })
             }
