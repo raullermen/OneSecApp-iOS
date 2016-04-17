@@ -13,7 +13,11 @@ class Util {
     let SCREENSIZE: CGRect = UIScreen.mainScreen().bounds
     
     class func AppVermelho()->UIColor{
-        return UIColor(red: 225/255, green: 41/255, blue: 61/255, alpha: 1)
+        return UIColor(red: 255/255, green: 27/255, blue: 86/255, alpha: 1)
+    }
+    
+    class func AppNavigationVermelho()->UIColor{
+        return UIColor(red: 255/255, green: 27/255, blue: 86/255, alpha: 1)
     }
     
     //MARK: EFEITOS VISUAIS

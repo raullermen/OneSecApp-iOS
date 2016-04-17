@@ -50,6 +50,8 @@
 		FD50D0CA1CB12BFF00E6C52F /* Gotham-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD50D0C71CB12BC200E6C52F /* Gotham-Light.otf */; };
 		FD50D0CB1CB12BFF00E6C52F /* Gotham-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD50D0C81CB12BC200E6C52F /* Gotham-Medium.otf */; };
 		FD50D0CF1CB13A2900E6C52F /* Gotham-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD50D0CE1CB13A1B00E6C52F /* Gotham-Bold.otf */; };
+		FD64463F1CC3B786007B7EB9 /* PerfilHeaderTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD64463E1CC3B786007B7EB9 /* PerfilHeaderTableCell.xib */; };
+		FD6446411CC3B83F007B7EB9 /* PerfilHeaderTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6446401CC3B83F007B7EB9 /* PerfilHeaderTableCell.swift */; };
 		FD68AC9B1CB9269C0082C505 /* CalendarioBotaoReservarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD68AC9A1CB9269C0082C505 /* CalendarioBotaoReservarViewCell.swift */; };
 		FD68AC9E1CB926D00082C505 /* EmpresaDetalhesLocalizacaoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD68AC9C1CB926D00082C505 /* EmpresaDetalhesLocalizacaoViewCell.swift */; };
 		FD68AC9F1CB926D00082C505 /* EmpresaDetalhesLocalizacaoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD68AC9D1CB926D00082C505 /* EmpresaDetalhesLocalizacaoViewCell.xib */; };
@@ -140,6 +142,8 @@
 		FD50D0C71CB12BC200E6C52F /* Gotham-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Light.otf"; sourceTree = "<group>"; };
 		FD50D0C81CB12BC200E6C52F /* Gotham-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Medium.otf"; sourceTree = "<group>"; };
 		FD50D0CE1CB13A1B00E6C52F /* Gotham-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Bold.otf"; sourceTree = "<group>"; };
+		FD64463E1CC3B786007B7EB9 /* PerfilHeaderTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PerfilHeaderTableCell.xib; path = "Views/Configuração/PerfilHeaderTableCell.xib"; sourceTree = "<group>"; };
+		FD6446401CC3B83F007B7EB9 /* PerfilHeaderTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PerfilHeaderTableCell.swift; path = "Views/Configuração/PerfilHeaderTableCell.swift"; sourceTree = "<group>"; };
 		FD68AC9A1CB9269C0082C505 /* CalendarioBotaoReservarViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarioBotaoReservarViewCell.swift; path = Views/EmpresaCalendario/CalendarioBotaoReservarViewCell.swift; sourceTree = "<group>"; };
 		FD68AC9C1CB926D00082C505 /* EmpresaDetalhesLocalizacaoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmpresaDetalhesLocalizacaoViewCell.swift; path = Views/EmpresasReservarHorario/EmpresaDetalhesLocalizacaoViewCell.swift; sourceTree = "<group>"; };
 		FD68AC9D1CB926D00082C505 /* EmpresaDetalhesLocalizacaoViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EmpresaDetalhesLocalizacaoViewCell.xib; path = Views/EmpresasReservarHorario/EmpresaDetalhesLocalizacaoViewCell.xib; sourceTree = "<group>"; };
@@ -282,6 +286,15 @@
 			name = EmpresasReservarHorario;
 			sourceTree = "<group>";
 		};
+		FD64463D1CC3B74A007B7EB9 /* Configuração */ = {
+			isa = PBXGroup;
+			children = (
+				FD64463E1CC3B786007B7EB9 /* PerfilHeaderTableCell.xib */,
+				FD6446401CC3B83F007B7EB9 /* PerfilHeaderTableCell.swift */,
+			);
+			name = "Configuração";
+			sourceTree = "<group>";
+		};
 		FD68ACA61CB9D4A00082C505 /* DetalhesReserva */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,6 +377,7 @@
 				FD7FA5561CB88ED500F7D65B /* EmpresaCalendario */,
 				FD4948C91CB33F9E00629EC8 /* MinhasReservas */,
 				FD68ACA61CB9D4A00082C505 /* DetalhesReserva */,
+				FD64463D1CC3B74A007B7EB9 /* Configuração */,
 				FD4948EB1CB34A8B00629EC8 /* DefaultTableViewCell.swift */,
 				FD4948EC1CB34A8B00629EC8 /* DefaultTableViewCell.xib */,
 			);
@@ -549,6 +563,7 @@
 				FD4948E81CB34A8000629EC8 /* MinhaReservaTableViewCell.xib in Resources */,
 				FD4948EE1CB34A8B00629EC8 /* DefaultTableViewCell.xib in Resources */,
 				FD50D0CA1CB12BFF00E6C52F /* Gotham-Light.otf in Resources */,
+				FD64463F1CC3B786007B7EB9 /* PerfilHeaderTableCell.xib in Resources */,
 				FD4948EA1CB34A8000629EC8 /* ReservaTableViewHeader.xib in Resources */,
 				FD50D0CB1CB12BFF00E6C52F /* Gotham-Medium.otf in Resources */,
 				FDADF3681C710EF4000708A0 /* LaunchScreen.storyboard in Resources */,
@@ -726,6 +741,7 @@
 				FD4948DA1CB34A1C00629EC8 /* MinhasReservas.swift in Sources */,
 				FD6B29311CAB660A00F5EB1E /* CompanyDTO.swift in Sources */,
 				FD4948D51CB34A1C00629EC8 /* Empresas.swift in Sources */,
+				FD6446411CC3B83F007B7EB9 /* PerfilHeaderTableCell.swift in Sources */,
 				FD4948DF1CB34A6600629EC8 /* EmpresaTableViewCell.swift in Sources */,
 				FD68AC9B1CB9269C0082C505 /* CalendarioBotaoReservarViewCell.swift in Sources */,
 				FD68AC9E1CB926D00082C505 /* EmpresaDetalhesLocalizacaoViewCell.swift in Sources */,

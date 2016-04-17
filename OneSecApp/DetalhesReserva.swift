@@ -29,7 +29,7 @@ class DetalhesReserva: UITableViewController {
             self.navigationController?.navigationBar.titleTextAttributes = titleDict as? [String : AnyObject]
         }
         
-        self.navigationController?.navigationBar.tintColor = Util.AppVermelho()
+        self.navigationController?.navigationBar.tintColor = Util.AppNavigationVermelho()
     }
     
     // MARK: TABLE VIEW

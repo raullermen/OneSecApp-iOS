@@ -23,8 +23,8 @@ class Login: UIViewController {
     
     // MARK: LAYOUT
     func AjustaLayout(){
-        self.navigationController?.navigationBar.translucent = true
-        self.navigationController?.navigationBar.barTintColor = Util.AppVermelho()
+        self.navigationController?.navigationBar.translucent = false
+        self.navigationController?.navigationBar.barTintColor = Util.AppNavigationVermelho()
         
         let font = UIFont(name: "GothamBold", size: 18.0)
         if let font = font {

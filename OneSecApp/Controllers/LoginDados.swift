@@ -10,7 +10,7 @@ import UIKit
 
 class LoginDados: UIViewController {
     
-    @IBOutlet weak var ProfilePicture: UIView!
+    @IBOutlet weak var ProfilePicture: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +23,14 @@ class LoginDados: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        view.endEditing(true)
+    }
+    
     // MARK: LAYOUT
     func AjustaLayout(){
-        self.navigationController?.navigationBar.translucent = true
-        self.navigationController?.navigationBar.barTintColor = Util.AppVermelho()
+        self.navigationController?.navigationBar.translucent = false
+        self.navigationController?.navigationBar.barTintColor = Util.AppNavigationVermelho()
         
         let font = UIFont(name: "GothamBold", size: 18.0)
         if let font = font {

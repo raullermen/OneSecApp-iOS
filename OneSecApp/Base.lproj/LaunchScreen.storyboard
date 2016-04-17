@@ -3,12 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <mutableArray key="Gotham-Bold.otf">
-            <string>GothamBold</string>
-        </mutableArray>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -22,17 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OneSecApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGl-2e-Ts9">
-                                <rect key="frame" x="88" y="319" width="200" height="30"/>
-                                <fontDescription key="fontDescription" name="GothamBold" family="Gotham Bold" pointSize="33"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icone_splash" translatesAutoresizingMaskIntoConstraints="NO" id="gjp-dO-K2F">
+                                <rect key="frame" x="122" y="269" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="oJv-sD-Ono"/>
+                                    <constraint firstAttribute="width" secondItem="gjp-dO-K2F" secondAttribute="height" multiplier="1:1" id="p5y-xM-rUC"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.88235294119999996" green="0.16078431369999999" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="CGl-2e-Ts9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="JI0-wH-odk"/>
-                            <constraint firstItem="CGl-2e-Ts9" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="QxD-vP-2nJ"/>
+                            <constraint firstItem="gjp-dO-K2F" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="8WU-AA-RS0"/>
+                            <constraint firstItem="gjp-dO-K2F" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Alk-Dk-2EQ"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -42,4 +39,7 @@
             <point key="canvasLocation" x="52.5" y="374.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icone_splash" width="1024" height="1024"/>
+    </resources>
 </document>
