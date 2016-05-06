@@ -20,7 +20,7 @@ class Empresas: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         AjustaLayout()
-        CarregaDados()
+        //CarregaDados()
     }
     
     // MARK: LAYOUT

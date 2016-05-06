@@ -39,7 +39,7 @@ class EmpresaReservaPopView: UITableViewController {
         self.landscapeContentSizeInPopup = CGSizeMake(400, 200);
         
         _idEmpresa = 2
-        CarregaDados()
+        //CarregaDados()
         
     }
     
@@ -77,7 +77,8 @@ class EmpresaReservaPopView: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        [NSUserDefaults .standardUserDefaults() .setInteger(self._listaProfissionais[indexPath.row].Id, forKey: "idProfissional")]
+        //[NSUserDefaults .standardUserDefaults() .setInteger(self._listaProfissionais[indexPath.row].Id, forKey: "idProfissional")]
+        [NSUserDefaults .standardUserDefaults() .setInteger(1, forKey: "idProfissional")]
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
