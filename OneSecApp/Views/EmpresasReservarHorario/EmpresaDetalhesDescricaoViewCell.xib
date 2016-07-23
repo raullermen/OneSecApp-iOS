@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Gotham-Bold.otf">
+            <string>GothamBold</string>
+        </mutableArray>
+        <mutableArray key="Gotham-Light.otf">
+            <string>Gotham-Light</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="116" id="bBn-MF-esB" customClass="EmpresaDetalhesDescricaoViewCell" customModule="OneSecApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="512" height="116"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bBn-MF-esB" id="6Ld-Ua-Ep2">
+                <rect key="frame" x="0.0" y="0.0" width="512" height="115"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQi-3d-WOe">
+                        <rect key="frame" x="18" y="18" width="486" height="15"/>
+                        <fontDescription key="fontDescription" name="GothamBold" family="Gotham Bold" pointSize="16"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U66-FK-Vbv">
+                        <rect key="frame" x="18" y="38" width="486" height="65"/>
+                        <string key="text">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralh</string>
+                        <fontDescription key="fontDescription" name="Gotham-Light" family="Gotham" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="U66-FK-Vbv" secondAttribute="bottom" constant="4" id="6iB-1Y-OxF"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="kQi-3d-WOe" secondAttribute="trailing" id="RER-fr-0KX"/>
+                    <constraint firstItem="U66-FK-Vbv" firstAttribute="trailing" secondItem="kQi-3d-WOe" secondAttribute="trailing" id="XeD-7y-yey"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="kQi-3d-WOe" secondAttribute="leading" constant="-10" id="f53-BN-a9T"/>
+                    <constraint firstItem="U66-FK-Vbv" firstAttribute="top" secondItem="kQi-3d-WOe" secondAttribute="bottom" constant="5" id="gMw-4z-7yJ"/>
+                    <constraint firstItem="U66-FK-Vbv" firstAttribute="width" secondItem="kQi-3d-WOe" secondAttribute="width" id="q1m-FO-QzQ"/>
+                    <constraint firstAttribute="topMargin" secondItem="kQi-3d-WOe" secondAttribute="top" constant="-10" id="qV1-Mi-1sm"/>
+                    <constraint firstItem="U66-FK-Vbv" firstAttribute="leading" secondItem="kQi-3d-WOe" secondAttribute="leading" id="vX1-Ez-N5h"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="367" y="318"/>
+        </tableViewCell>
+    </objects>
+</document>

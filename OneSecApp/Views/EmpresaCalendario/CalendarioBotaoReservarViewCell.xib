@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Gotham-Bold.otf">
+            <string>GothamBold</string>
+            <string>GothamBold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CalendarioBotaoReservarViewCell" rowHeight="74" id="Eb3-mz-8JT" customClass="CalendarioBotaoReservarViewCell" customModule="OneSecApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="433" height="74"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eb3-mz-8JT" id="FJR-I8-Zqu">
+                <rect key="frame" x="0.0" y="0.0" width="433" height="73"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNn-I7-SmV">
+                        <rect key="frame" x="-2" y="3" width="437" height="66"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09:30 - 10:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2FV-nz-nf9">
+                                <rect key="frame" x="20" y="0.0" width="197" height="66"/>
+                                <fontDescription key="fontDescription" name="GothamBold" family="Gotham Bold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reservado" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5id-wN-IWg">
+                                <rect key="frame" x="220" y="0.0" width="197" height="66"/>
+                                <fontDescription key="fontDescription" name="GothamBold" family="Gotham Bold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32156862749999998" green="0.6705882353" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2FV-nz-nf9" firstAttribute="centerY" secondItem="SNn-I7-SmV" secondAttribute="centerY" id="5HL-ud-UcY"/>
+                            <constraint firstItem="2FV-nz-nf9" firstAttribute="width" secondItem="SNn-I7-SmV" secondAttribute="width" multiplier="0.45" id="Uc9-Nx-zbm"/>
+                            <constraint firstItem="2FV-nz-nf9" firstAttribute="leading" secondItem="SNn-I7-SmV" secondAttribute="leading" constant="20" id="XJB-ou-ShS"/>
+                            <constraint firstItem="5id-wN-IWg" firstAttribute="height" secondItem="2FV-nz-nf9" secondAttribute="height" id="mhW-Uq-vbt"/>
+                            <constraint firstItem="5id-wN-IWg" firstAttribute="width" secondItem="2FV-nz-nf9" secondAttribute="width" id="nQn-fa-qCs"/>
+                            <constraint firstItem="5id-wN-IWg" firstAttribute="top" secondItem="2FV-nz-nf9" secondAttribute="top" id="qk6-Wq-sZe"/>
+                            <constraint firstAttribute="trailing" secondItem="5id-wN-IWg" secondAttribute="trailing" constant="20" id="srU-4f-ZXi"/>
+                            <constraint firstAttribute="bottom" secondItem="2FV-nz-nf9" secondAttribute="bottom" id="zuj-oa-McP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="topMargin" secondItem="SNn-I7-SmV" secondAttribute="top" constant="5" id="6Zk-7X-1ts"/>
+                    <constraint firstItem="SNn-I7-SmV" firstAttribute="leading" secondItem="FJR-I8-Zqu" secondAttribute="leadingMargin" constant="-10" id="Dzf-4C-dWr"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="SNn-I7-SmV" secondAttribute="trailing" constant="-10" id="v1h-dD-vkh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="SNn-I7-SmV" secondAttribute="bottom" constant="5" id="Ghg-sF-nIb"/>
+            </constraints>
+            <connections>
+                <outlet property="_BackgroundView" destination="SNn-I7-SmV" id="4e1-OD-TA4"/>
+                <outlet property="_HorarioReserva" destination="2FV-nz-nf9" id="hGB-cw-O5I"/>
+                <outlet property="_TextoReserva" destination="5id-wN-IWg" id="9Bb-8d-IsJ"/>
+            </connections>
+            <point key="canvasLocation" x="438.5" y="218"/>
+        </tableViewCell>
+    </objects>
+</document>

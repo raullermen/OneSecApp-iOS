@@ -101,7 +101,6 @@ class Empresas: UITableViewController {
                     self.table?.reloadData()
                 })
             }
-            
         })
     }
 

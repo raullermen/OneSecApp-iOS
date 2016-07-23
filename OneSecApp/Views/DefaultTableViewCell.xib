@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="87" id="Xk8-p4-NI7" customClass="DefaultTableViewCell" customModule="OneSecApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="452" height="87"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xk8-p4-NI7" id="xnq-UL-biS">
+                <rect key="frame" x="0.0" y="0.0" width="452" height="86"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5k-2K-nM7">
+                        <rect key="frame" x="0.0" y="-1" width="452" height="87"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="TSu-VA-3ac">
+                        <rect key="frame" x="216" y="33" width="20" height="20"/>
+                    </activityIndicatorView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="TSu-VA-3ac" firstAttribute="centerY" secondItem="xnq-UL-biS" secondAttribute="centerY" id="7aM-di-CO9"/>
+                    <constraint firstItem="TSu-VA-3ac" firstAttribute="centerX" secondItem="xnq-UL-biS" secondAttribute="centerX" id="B3B-gW-37Y"/>
+                    <constraint firstItem="L5k-2K-nM7" firstAttribute="width" secondItem="xnq-UL-biS" secondAttribute="width" id="OfA-C6-HPR"/>
+                    <constraint firstItem="L5k-2K-nM7" firstAttribute="centerY" secondItem="xnq-UL-biS" secondAttribute="centerY" id="Sra-cI-cL0"/>
+                    <constraint firstItem="L5k-2K-nM7" firstAttribute="height" secondItem="xnq-UL-biS" secondAttribute="height" id="p6i-2Y-gAh"/>
+                    <constraint firstItem="L5k-2K-nM7" firstAttribute="centerX" secondItem="xnq-UL-biS" secondAttribute="centerX" id="pZW-JA-GGq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="_actIcon" destination="TSu-VA-3ac" id="SzC-Zv-6Qp"/>
+                <outlet property="_centerTitle" destination="L5k-2K-nM7" id="tYq-Ks-cJJ"/>
+            </connections>
+            <point key="canvasLocation" x="359" y="253.5"/>
+        </tableViewCell>
+    </objects>
+</document>

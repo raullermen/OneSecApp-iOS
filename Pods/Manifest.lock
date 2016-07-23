@@ -1,0 +1,25 @@
+PODS:
+  - Alamofire (3.2.0)
+  - EVReflection (2.33.0)
+  - FDKeychain (1.2.2)
+  - JTCalendar (2.1.5)
+  - STPopup (1.6.1)
+  - TPKeyboardAvoiding (1.3)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.2)
+  - EVReflection (~> 2.33)
+  - FDKeychain (~> 1.2)
+  - JTCalendar (~> 2.0)
+  - STPopup
+  - TPKeyboardAvoiding
+
+SPEC CHECKSUMS:
+  Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
+  EVReflection: 1429d7bcd9948f5accb2dad383642480bc17e05e
+  FDKeychain: ce0d5e4fac972c28e921e893ffe982832695d17b
+  JTCalendar: 57a4420f12d10c93c3b28da96803e7043d1c9281
+  STPopup: f32dc6a944b57311b6d2d6e3afd789f83a0c4cbc
+  TPKeyboardAvoiding: a5138f318c06fb3e151f886e18ce4a72695d9cbe
+
+COCOAPODS: 0.39.0

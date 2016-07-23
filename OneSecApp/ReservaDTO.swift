@@ -7,17 +7,23 @@
 //
 
 import Foundation
+import EVReflection
 
-class ReservaDTO {
+class ReservaDTO: EVObject {
     
-    var EmpresaId = Int()
-    var EmpresaNome = String()
-    var ReservaData = NSDate()
-    var ReservaId = Int()
-    var ReservaStatus = Int()
-    var ServicoNome = String()
+    var Id = Int()
+    var ReservationStatus = Int()
+    var ReservationType = Int()
+    var Start = String()
+    var End = String()
+    var ClientId = Int()
+    var CompanyId = Int()
+    var ResourceId = Int()
+    var ServiceId = Int()
     
-    init(){
+    var RowIndex = Int()
+    
+    required init(){
         
     }
     

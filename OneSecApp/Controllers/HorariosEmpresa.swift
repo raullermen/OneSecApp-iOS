@@ -6,12 +6,18 @@
 //  Copyright © 2016 Raul Lermen. All rights reserved.
 //
 
+//    func AtualizaHorariosDoDia(){
+//        _listaHorarioDoDia = _listaHorario.filter { c in c.isSameDateThan(self._dateSelected) }
+//    }
+
 import UIKit
 import JTCalendar
+import EVReflection
 
 class HorariosEmpresa: UIViewController, JTCalendarDelegate {
 
     var _webservice = Webservice()
+    var _isWaitingResponse = Bool()
     
     @IBOutlet weak var _calendarContentView: JTHorizontalCalendarView!
     @IBOutlet weak var _tableAppointments: UITableView!
@@ -19,9 +25,7 @@ class HorariosEmpresa: UIViewController, JTCalendarDelegate {
     
     var _calendarManager = JTCalendarManager()
     var _dateSelected = NSDate()
-    
-    var _listaHorario = Array<HorarioEmpresaDTO>()
-    var _listaHorarioDoDia = Array<HorarioEmpresaDTO>()
+    var _listaHorarioDoDia = Array<MobileReservationDTO>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +36,6 @@ class HorariosEmpresa: UIViewController, JTCalendarDelegate {
         _calendarManager.contentView = _calendarContentView
         _calendarManager.setDate(NSDate())
         _calendarManager.reload()
-        
-        _listaHorario = _webservice.RetornaListaHorarios()
         
         [NSUserDefaults .standardUserDefaults() .setInteger(0, forKey: "idProfissional")]
     }
@@ -67,10 +69,6 @@ class HorariosEmpresa: UIViewController, JTCalendarDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func AtualizaHorariosDoDia(){
-        _listaHorarioDoDia = _listaHorario.filter { c in c.isSameDateThan(self._dateSelected) }
     }
     
     func calendar(calendar: JTCalendarManager!, canDisplayPageWithDate date: NSDate!) -> Bool {
@@ -125,9 +123,15 @@ class HorariosEmpresa: UIViewController, JTCalendarDelegate {
             UIView.transitionWithView(castDayView, duration: 0.3, options: [],
                 animations: {
                     castDayView.circleView.transform = CGAffineTransformIdentity
-                    self.AtualizaHorariosDoDia()
                     calendar.reload()
-                    self._tableAppointments.reloadData()
+                    
+                    if self._dateSelected.timeIntervalSinceDate(NSDate()) > 0 {
+                        self.GetMobileReservations(calendar)
+                    }else{
+                        self._listaHorarioDoDia.removeAll()
+                        self._tableAppointments.reloadData()
+                    }
+                    
                 },
                 completion: { (Bool) -> Void in
                 
@@ -145,6 +149,39 @@ class HorariosEmpresa: UIViewController, JTCalendarDelegate {
             }
         }
     }
+    
+    //MARK: WEBSERVICE
+    func GetMobileReservations(calendar: JTCalendarManager){
+        
+        _isWaitingResponse = true
+        _listaHorarioDoDia.removeAll()
+        _tableAppointments.reloadData()
+        
+        self._webservice.GetMobileReservations(1, resourceId: 1, dataReserva: self._dateSelected) { (erro, listaReservas) in
+            self._isWaitingResponse = false
+            
+            if erro != nil {
+                print(erro)
+            }else{
+                self._listaHorarioDoDia = listaReservas!
+                dispatch_async(dispatch_get_main_queue(),{
+                    self._tableAppointments.reloadData()
+                })
+            }
+        }
+    }
+    
+    func PostMobileReservation(reservaPost: ReservaDTO){
+        self._webservice.PostMobileReservation(reservaPost) { (erro, reserva) in
+            if erro != nil {
+                print(erro)
+                
+            }else{
+                
+            }
+            self._tableAppointments.reloadRowsAtIndexPaths([NSIndexPath(forRow: reservaPost.RowIndex, inSection: 0)], withRowAnimation: .Fade)
+        }
+    }
 }
 
 //# MARK: - TABLE DELEGATE
@@ -157,7 +194,7 @@ extension HorariosEmpresa: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let containerView = NSBundle.mainBundle().loadNibNamed("ReservaTableViewHeader", owner: nil, options: nil)[0] as! ReservaTableViewHeader
         
-        containerView.TextoHeader.text = "Horarios da Terça-Feira - 28/04/2016"
+        containerView.TextoHeader.text = Util.FormataDataParaTituloHeader(self._dateSelected)
         containerView.TextoHeader.textAlignment = .Center
         
         return containerView
@@ -169,45 +206,61 @@ extension HorariosEmpresa: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if _listaHorarioDoDia.count > 0 {
-            //return _listaHorarioDoDia.count
-            return 5
+            return _listaHorarioDoDia.count
         }else{
-            return 5
+            return 1
         }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         tableView.registerNib(UINib(nibName: "DefaultTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-        if  true == true /*  _dateSelected.timeIntervalSinceDate(NSDate()) > 0  */ {
-            if _listaHorarioDoDia.count == 0 { //MUDAR CONDICAO PARA > 0 NO FINAL
-                //cell._centerTitle.text = _listaHorarioDoDia[indexPath.row].retornaData()
+        if _dateSelected.timeIntervalSinceDate(NSDate()) > 0 {
+            
+            if _listaHorarioDoDia.count > 0 {
+                
+                self._tableAppointments.allowsSelection = true
                 
                 tableView.registerNib(UINib(nibName: "CalendarioBotaoReservarViewCell", bundle: nil), forCellReuseIdentifier: "CalendarioBotaoReservarViewCell")
                 
                 let cell = tableView.dequeueReusableCellWithIdentifier("CalendarioBotaoReservarViewCell", forIndexPath: indexPath) as! CalendarioBotaoReservarViewCell
                 
+                cell._HorarioReserva.text = Util.FormataDataParaTituloReserva(_listaHorarioDoDia[indexPath.row].Start) + "-" + Util.FormataDataParaTituloReserva(_listaHorarioDoDia[indexPath.row].End)
+                
+                if self._listaHorarioDoDia[indexPath.row].isAvailable {
+                    cell._TextoReserva.text = "Reservar"
+                    cell._BackgroundView.backgroundColor = UIColor.greenColor()
+                }else{
+                    cell._TextoReserva.text = "Reservado"
+                    cell._BackgroundView.backgroundColor = UIColor.grayColor()
+                }
+                
                 return cell
             }else{
+                self._tableAppointments.allowsSelection = false
+                
                 let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! DefaultTableViewCell
                 
-                if (indexPath.row == 3){
-                    cell._centerTitle.text = "nao tem nada marcado"
-                }else{
+                if (_isWaitingResponse){
                     cell._centerTitle.text = ""
+                    cell._actIcon.hidden = false
+                    cell._actIcon.startAnimating()
+                }else{
+                    cell._centerTitle.text = "Selecione uma data."
+                    cell._actIcon.hidden = true
                 }
+                
+                return cell
             }
         }else{
+            self._tableAppointments.allowsSelection = false
+            
             let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! DefaultTableViewCell
             
-            if (indexPath.row == 3){
-                cell._centerTitle.text = "Selecione uma data"
-            }else{
-                cell._centerTitle.text = ""
-            }
+            cell._centerTitle.text = "Selecione uma data futura."
+            cell._actIcon.hidden = true
+            
+            return cell
         }
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! DefaultTableViewCell
-        return cell
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -215,27 +268,34 @@ extension HorariosEmpresa: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath) as! DefaultTableViewCell
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! CalendarioBotaoReservarViewCell
         
-        let alert:UIAlertController = UIAlertController(title: "Alerta!", message: "Deseja reservar horario?", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Sim", style: UIAlertActionStyle.Default, handler: {
-            action in
-            
-            
-            let reserva = ReservaDTO()
-            reserva.EmpresaId = 1
-            reserva.EmpresaNome = "Empresa teste"
-            reserva.ReservaId =  1 //Estatus que vai dizer "enviado para aprovacao"
-            reserva.ServicoNome = "Corte de cabelo"
-            reserva.ReservaData = NSDate()
-            
-            //ReservaNSManagedObject.save
-            
-        }))
-        alert.addAction(UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        
+        if self._listaHorarioDoDia[indexPath.row].isAvailable {
+            let alert:UIAlertController = UIAlertController(title: "Alerta!", message: "Deseja reservar horario?", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Sim", style: UIAlertActionStyle.Default, handler: {
+                action in
+                
+                cell._TextoReserva.text = "Reservando..."
+                
+                let reserva = ReservaDTO()
+                reserva.ReservationStatus = 1
+                reserva.ReservationType = 2
+                reserva.Start = Util.FormataDataParaEnvioPost(self._listaHorarioDoDia[indexPath.row].Start)
+                reserva.End = Util.FormataDataParaEnvioPost(self._listaHorarioDoDia[indexPath.row].End)
+                reserva.ClientId = 1
+                reserva.CompanyId = 1
+                reserva.ResourceId = 1
+                reserva.ServiceId = 1
+                reserva.RowIndex = indexPath.row
+                
+                self.PostMobileReservation(reserva)
+                
+            }))
+            alert.addAction(UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
     }
 
-    
-    
 }

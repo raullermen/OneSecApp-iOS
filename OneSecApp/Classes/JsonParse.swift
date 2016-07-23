@@ -54,4 +54,41 @@ class JsonParse {
         
         return nil
     }
+    
+    class func ParseMobileReservations(JSON: AnyObject) -> Array<MobileReservationDTO>? {
+        
+        if let reservas = JSON as? NSArray {
+            
+            var listaReservas = Array<MobileReservationDTO>()
+            
+            for reserva in reservas {
+                let funcdto = MobileReservationDTO()
+                
+                funcdto.Start = Util.FormataStringParaData(reserva["Start"] as! String)
+                funcdto.End = Util.FormataStringParaData(reserva["End"] as! String)
+                funcdto.isAvailable = reserva["Available"] as! Bool
+                
+                listaReservas.append(funcdto)
+            }
+            
+            return listaReservas
+        }
+        
+        return nil
+    }
+    
+    class func ParsePostedMobileReservation(JSON: AnyObject) -> ReservaDTO? {
+        
+        let res = ReservaDTO()
+        res.ReservationStatus = JSON["ReservationStatus"] as! Int
+        res.ReservationType = JSON["ReservationType"] as! Int
+        res.Start = JSON["Start"] as! String
+        res.End = JSON["End"] as! String
+        res.CompanyId = JSON["CompanyId"] as! Int
+        res.ServiceId = JSON["ServiceId"] as! Int
+        res.ResourceId = JSON["ResourceId"] as! Int
+        res.Id = JSON["Id"] as! Int
+
+        return nil
+    }
 }

@@ -7,12 +7,12 @@
 //
 import Foundation
 
-class HorarioEmpresaDTO {
+class MobileReservationDTO {
     
-    var idHorarioDTO = Int() //Recebo esse valor null e ele eh preenchido quando tento fazer uma reserva
-    var empresaId = Int()
-    var DataHora = NSDate()
-    var Disponivel = Bool()
+    var Id = Int() //Recebo esse valor null e ele eh preenchido quando tento fazer uma reserva
+    var Start = NSDate()
+    var End = NSDate()
+    var isAvailable = Bool()
     
     init(){
         
@@ -21,7 +21,7 @@ class HorarioEmpresaDTO {
     func isSameDateThan(date: NSDate)->Bool{
         
         let now = date
-        let olderDate = self.DataHora
+        let olderDate = self.Start
         
         let order = NSCalendar.currentCalendar().compareDate(now, toDate: olderDate, toUnitGranularity: .Day)
         
@@ -33,7 +33,7 @@ class HorarioEmpresaDTO {
     }
     
     func retornaData()->String{
-        let date = self.DataHora //get the time, in this case the time an object was created.
+        let date = self.Start //get the time, in this case the time an object was created.
         //format date
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "hh:mm" //format style. Browse online to get a format that fits your needs.

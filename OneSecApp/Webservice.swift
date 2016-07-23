@@ -8,10 +8,11 @@
 
 import Foundation
 import Alamofire
+import EVReflection
 
 class Webservice  {
     
-    let URLBase = "https://onesecapi.herokuapp.com/api/v1/"
+    let URLBase = "http://onesecwebapi.azurewebsites.net/api/"
     
     func GetCompanies(completion: (erro: String?, listaEmpresas: Array<CompanyDTO>?) -> Void){
         Alamofire.request(.GET, self.URLBase + "/companies").responseJSON
@@ -37,38 +38,35 @@ class Webservice  {
         }
     }
     
-    func RetornaListaHorarios()-> Array<HorarioEmpresaDTO>{
-        var lista = Array<HorarioEmpresaDTO>()
+    func GetMobileReservations(empresaId: Int, resourceId: Int, dataReserva: NSDate,
+                               completion: (erro: String?, listaReservas: Array<MobileReservationDTO>?)-> Void){
         
-        let df = NSDateFormatter()
-        df.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let url = self.URLBase + "MobileReservations?empresaId=" + String(empresaId) +
+            "&resourceId=" + String(resourceId) + "&dataReserva=" + Util.FormataDataParaRequest(dataReserva)
         
-        let t1 = HorarioEmpresaDTO()
-        t1.DataHora = df.dateFromString("2016-03-17 17:00:00")!
-        t1.Disponivel = true
-        t1.empresaId = 1
+        Alamofire.request(.GET, url).responseJSON
+            { response in switch response.result {
+            case .Success(let JSON):
+                completion(erro: nil, listaReservas: JsonParse.ParseMobileReservations(JSON))
+            case .Failure(let error):
+                print("Request failed with error: \(error)")
+                completion(erro: error.localizedDescription, listaReservas: nil)
+            }
+        }
+    }
+    
+    func PostMobileReservation(reserva: ReservaDTO, completion: (erro: String?, reserva: ReservaDTO?)-> Void){
+        let parameters = reserva.toDictionary()
         
-        let t2 = HorarioEmpresaDTO()
-        t2.DataHora = df.dateFromString("2016-03-17 18:00:00")!
-        t2.Disponivel = true
-        t2.empresaId = 1
-        
-        let t3 = HorarioEmpresaDTO()
-        t3.DataHora = df.dateFromString("2016-03-18 17:00:00")!
-        t3.Disponivel = true
-        t3.empresaId = 1
-        
-        let t4 = HorarioEmpresaDTO()
-        t4.DataHora = df.dateFromString("2016-03-19 17:00:00")!
-        t4.Disponivel = true
-        t4.empresaId = 1
-        
-        lista.append(t1)
-        lista.append(t2)
-        lista.append(t3)
-        lista.append(t4)
-        
-        return lista
+        Alamofire.request(.POST, self.URLBase + "CompanyReservations", parameters: parameters as? [String : AnyObject], encoding: .JSON).responseJSON
+            { response in switch response.result {
+            case .Success(let JSON):
+                completion(erro: nil, reserva: JsonParse.ParsePostedMobileReservation(JSON))
+            case .Failure(let error):
+                print("Request failed with error: \(error)")
+                completion(erro: error.localizedDescription, reserva: nil)
+            }
+        }
     }
     
 //    func GetCompanies(completion: (erro: String?, listaEmpresas: List<CompanyDTO>?) -> Void){

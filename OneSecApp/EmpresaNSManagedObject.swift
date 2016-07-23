@@ -24,12 +24,12 @@ class CompanyNSManagedObject: NSManagedObject {
         let context:NSManagedObjectContext = appDel.managedObjectContext
         let newItem = NSEntityDescription.insertNewObjectForEntityForName("Reserva", inManagedObjectContext: context) as! ReservaNSManagedObject
         
-        newItem.empresaId = res.EmpresaId
-        newItem.empresaNome = res.EmpresaNome
-        newItem.reservaData = res.ReservaData
-        newItem.reservaId = res.ReservaId
-        newItem.reservaStatus = res.ReservaStatus
-        newItem.servicoNome = res.ServicoNome
+//        newItem.empresaId = res.EmpresaId
+//        newItem.empresaNome = res.EmpresaNome
+//        newItem.reservaData = res.ReservaData
+//        newItem.reservaId = res.ReservaId
+//        newItem.reservaStatus = res.ReservaStatus
+//        newItem.servicoNome = res.ServicoNome
         
         return newItem
     }
@@ -53,12 +53,12 @@ class CompanyNSManagedObject: NSManagedObject {
             for item in results {
                 let meddtop = ReservaDTO()
                 
-                meddtop.EmpresaId = item.empresaId
-                meddtop.EmpresaNome = item.empresaNome
-                meddtop.ReservaData = item.reservaData
-                meddtop.ReservaId = item.reservaId
-                meddtop.ReservaStatus = item.reservaStatus
-                meddtop.ServicoNome = item.servicoNome
+//                meddtop.EmpresaId = item.empresaId
+//                meddtop.EmpresaNome = item.empresaNome
+//                meddtop.ReservaData = item.reservaData
+//                meddtop.ReservaId = item.reservaId
+//                meddtop.ReservaStatus = item.reservaStatus
+//                meddtop.ServicoNome = item.servicoNome
                 
                 dtos.append(meddtop)
             }

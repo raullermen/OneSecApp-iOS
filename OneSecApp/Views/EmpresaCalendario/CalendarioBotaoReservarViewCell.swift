@@ -11,6 +11,10 @@ import UIKit
 
 class CalendarioBotaoReservarViewCell: UITableViewCell {
     
+    @IBOutlet weak var _BackgroundView: UIView!
+    @IBOutlet weak var _HorarioReserva: UILabel!
+    @IBOutlet weak var _TextoReserva: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

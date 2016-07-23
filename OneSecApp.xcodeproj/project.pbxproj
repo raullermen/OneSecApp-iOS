@@ -71,7 +71,7 @@
 		FDADF3681C710EF4000708A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDADF3661C710EF4000708A0 /* LaunchScreen.storyboard */; };
 		FDADF3731C710EF4000708A0 /* OneSecAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDADF3721C710EF4000708A0 /* OneSecAppTests.swift */; };
 		FDADF37E1C710EF4000708A0 /* OneSecAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDADF37D1C710EF4000708A0 /* OneSecAppUITests.swift */; };
-		FDDB21311C9A3B5C00CE787C /* HorarioEmpresaDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB21301C9A3B5C00CE787C /* HorarioEmpresaDTO.swift */; };
+		FDDB21311C9A3B5C00CE787C /* MobileReservationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB21301C9A3B5C00CE787C /* MobileReservationDTO.swift */; };
 		FDDB21341C9A3C7E00CE787C /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB21331C9A3C7E00CE787C /* Webservice.swift */; };
 /* End PBXBuildFile section */
 
@@ -169,7 +169,7 @@
 		FDADF3791C710EF4000708A0 /* OneSecAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneSecAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDADF37D1C710EF4000708A0 /* OneSecAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSecAppUITests.swift; sourceTree = "<group>"; };
 		FDADF37F1C710EF4000708A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDDB21301C9A3B5C00CE787C /* HorarioEmpresaDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorarioEmpresaDTO.swift; sourceTree = "<group>"; };
+		FDDB21301C9A3B5C00CE787C /* MobileReservationDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileReservationDTO.swift; sourceTree = "<group>"; };
 		FDDB21331C9A3C7E00CE787C /* Webservice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -387,7 +387,7 @@
 		FDADF3961C711ED0000708A0 /* DataTransferObjects */ = {
 			isa = PBXGroup;
 			children = (
-				FDDB21301C9A3B5C00CE787C /* HorarioEmpresaDTO.swift */,
+				FDDB21301C9A3B5C00CE787C /* MobileReservationDTO.swift */,
 				FD6B29301CAB660A00F5EB1E /* CompanyDTO.swift */,
 				FD6B29341CAB67F900F5EB1E /* ReservaDTO.swift */,
 				FD4496D31CBDB93A00FB55B1 /* ProfissionalDTO.swift */,
@@ -726,7 +726,7 @@
 				FD4496C61CBB1B7900FB55B1 /* LoginDados.swift in Sources */,
 				FD4496CF1CBC929700FB55B1 /* EmpresaReservaPopupViewCell.swift in Sources */,
 				FD50D0C51CB12AC000E6C52F /* Util.swift in Sources */,
-				FDDB21311C9A3B5C00CE787C /* HorarioEmpresaDTO.swift in Sources */,
+				FDDB21311C9A3B5C00CE787C /* MobileReservationDTO.swift in Sources */,
 				FD4948D41CB34A1C00629EC8 /* Configuracoes.swift in Sources */,
 				FD68ACA81CB9F25D0082C505 /* DetalheReservaViewCell.swift in Sources */,
 				FD4948E91CB34A8000629EC8 /* ReservaTableViewHeader.swift in Sources */,
